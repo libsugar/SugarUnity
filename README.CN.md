@@ -25,7 +25,7 @@
   {
     "scopedRegistries": [
       {
-        "name": "NPM",
+        "name": "npm",
         "url": "https://registry.npmjs.org",
         "scopes": [
           "com.libsugar"
@@ -37,3 +37,6 @@
     }
   }
   ```
+  或者在 unity 编辑器中操作  
+  配置 `Project Settings -> Package Manager -> Scoped Registeries`  
+  然后在包管理器中添加包  

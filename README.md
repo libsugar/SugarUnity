@@ -25,7 +25,7 @@ Like syntactic sugar, but is library
   {
     "scopedRegistries": [
       {
-        "name": "NPM",
+        "name": "npm",
         "url": "https://registry.npmjs.org",
         "scopes": [
           "com.libsugar"
@@ -37,3 +37,6 @@ Like syntactic sugar, but is library
     }
   }
   ```
+  or use gui in unity editor  
+  config `Project Settings -> Package Manager -> Scoped Registeries`  
+  then add package in package manager  
