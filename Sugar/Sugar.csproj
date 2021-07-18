@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Sugar.Unity</AssemblyName>
+        <RootNamespace>LibSugar.Unity</RootNamespace>
+        <Nullable>enable</Nullable>
+        <PackageId>LibSugar.Unity</PackageId>
+        <Authors>Volight</Authors>
+        <Product>LibSugar.Unity</Product>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="UnityEngine">
+        <HintPath>..\Lib\UnityEngine.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
