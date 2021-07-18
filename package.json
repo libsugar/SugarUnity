@@ -1,13 +1,14 @@
 {
   "name": "com.libsugar.sugar.unity",
   "displayName": "SugarUnity",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "unity": "2021.1",
   "description": "Like syntactic sugar, but is library",
   "files": [
     "/Runtime/**/*.meta",
     "/Runtime/**/*.dll",
     "/Runtime/**/*.pdb",
+    "/Runtime/**/*.xml",
     "Runtime.meta",
     "CHANGELOG.md",
     "CHANGELOG.md.meta",

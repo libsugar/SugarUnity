@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,7 +9,7 @@
         <Authors>libsugar</Authors>
         <Product>LibSugar.Unity</Product>
         <LangVersion>9</LangVersion>
-        <PackageVersion>0.1.0</PackageVersion>
+        <PackageVersion>0.1.4</PackageVersion>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -21,9 +21,13 @@
         <PackageIconUrl />
         <RepositoryUrl>https://github.com/libsugar/SugarUnity</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <AssemblyVersion>0.1.0.0</AssemblyVersion>
-        <FileVersion>0.1.0.0</FileVersion>
-        <Version>0.1.0</Version>
+        <AssemblyVersion>0.1.4.0</AssemblyVersion>
+        <FileVersion>0.1.4.0</FileVersion>
+        <Version>0.1.4</Version>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <DocumentationFile>..\Runtime\Sugar.Unity.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

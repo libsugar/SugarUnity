@@ -1,0 +1,1325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sugar.Unity</name>
+    </assembly>
+    <members>
+        <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector2,System.Func{System.Single,System.Single})">
+            <summary>select by <c>f</c> <code>(x, y) => (f(x), f(y))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector3,System.Func{System.Single,System.Single})">
+            <summary>select by <c>f</c> <code>(x, y, z) => (f(x), f(y), f(z))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector4,System.Func{System.Single,System.Single})">
+            <summary>select by <c>f</c> <code>(x, y, z, w) => (f(x), f(y), f(z), f(w))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Syx(UnityEngine.Vector2)">
+            <summary>swap <c>x &lt;=> y</c> <code>(x, y) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Syx(UnityEngine.Vector3)">
+            <summary>swap <c>x &lt;=> y</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Szx(UnityEngine.Vector3)">
+            <summary>swap <c>x &lt;=> z</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Szy(UnityEngine.Vector3)">
+            <summary>swap <c>y &lt;=> z</c> <code>(x, y, z) => (x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Syx(UnityEngine.Vector4)">
+            <summary>swap <c>x &lt;=> y</c> <code>(x, y, z, w) => (y, x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Szx(UnityEngine.Vector4)">
+            <summary>swap <c>x &lt;=> z</c> <code>(x, y, z, w) => (z, y, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Swx(UnityEngine.Vector4)">
+            <summary>swap <c>x &lt;=> w</c> <code>(x, y, z, w) => (w, y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Szy(UnityEngine.Vector4)">
+            <summary>swap <c>y &lt;=> z</c> <code>(x, y, z, w) => (x, z, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Swy(UnityEngine.Vector4)">
+            <summary>swap <c>y &lt;=> w</c> <code>(x, y, z, w) => (x, w, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Swz(UnityEngine.Vector4)">
+            <summary>swap <c>z &lt;=> w</c> <code>(x, y, z, w) => (x, y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxx(UnityEngine.Vector2)">
+            <summary>format to <c>(x, x)</c> <code>(x, y) => (x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxy(UnityEngine.Vector2)">
+            <summary>format to <c>(x, y)</c> <code>(x, y) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyx(UnityEngine.Vector2)">
+            <summary>format to <c>(y, x)</c> <code>(x, y) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyy(UnityEngine.Vector2)">
+            <summary>format to <c>(y, y)</c> <code>(x, y) => (y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxx(UnityEngine.Vector3)">
+            <summary>format to <c>(x, x, x)</c> <code>(x, y, z) => (x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxy(UnityEngine.Vector3)">
+            <summary>format to <c>(x, x, y)</c> <code>(x, y, z) => (x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxz(UnityEngine.Vector3)">
+            <summary>format to <c>(x, x, z)</c> <code>(x, y, z) => (x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyx(UnityEngine.Vector3)">
+            <summary>format to <c>(x, y, x)</c> <code>(x, y, z) => (x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyy(UnityEngine.Vector3)">
+            <summary>format to <c>(x, y, y)</c> <code>(x, y, z) => (x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyz(UnityEngine.Vector3)">
+            <summary>format to <c>(x, y, z)</c> <code>(x, y, z) => (x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzx(UnityEngine.Vector3)">
+            <summary>format to <c>(x, z, x)</c> <code>(x, y, z) => (x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzy(UnityEngine.Vector3)">
+            <summary>format to <c>(x, z, y)</c> <code>(x, y, z) => (x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzz(UnityEngine.Vector3)">
+            <summary>format to <c>(x, z, z)</c> <code>(x, y, z) => (x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxx(UnityEngine.Vector3)">
+            <summary>format to <c>(y, x, x)</c> <code>(x, y, z) => (y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxy(UnityEngine.Vector3)">
+            <summary>format to <c>(y, x, y)</c> <code>(x, y, z) => (y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxz(UnityEngine.Vector3)">
+            <summary>format to <c>(y, x, z)</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyx(UnityEngine.Vector3)">
+            <summary>format to <c>(y, y, x)</c> <code>(x, y, z) => (y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyy(UnityEngine.Vector3)">
+            <summary>format to <c>(y, y, y)</c> <code>(x, y, z) => (y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyz(UnityEngine.Vector3)">
+            <summary>format to <c>(y, y, z)</c> <code>(x, y, z) => (y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzx(UnityEngine.Vector3)">
+            <summary>format to <c>(y, z, x)</c> <code>(x, y, z) => (y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzy(UnityEngine.Vector3)">
+            <summary>format to <c>(y, z, y)</c> <code>(x, y, z) => (y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzz(UnityEngine.Vector3)">
+            <summary>format to <c>(y, z, z)</c> <code>(x, y, z) => (y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxx(UnityEngine.Vector3)">
+            <summary>format to <c>(z, x, x)</c> <code>(x, y, z) => (z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxy(UnityEngine.Vector3)">
+            <summary>format to <c>(z, x, y)</c> <code>(x, y, z) => (z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxz(UnityEngine.Vector3)">
+            <summary>format to <c>(z, x, z)</c> <code>(x, y, z) => (z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyx(UnityEngine.Vector3)">
+            <summary>format to <c>(z, y, x)</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyy(UnityEngine.Vector3)">
+            <summary>format to <c>(z, y, y)</c> <code>(x, y, z) => (z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyz(UnityEngine.Vector3)">
+            <summary>format to <c>(z, y, z)</c> <code>(x, y, z) => (z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzx(UnityEngine.Vector3)">
+            <summary>format to <c>(z, z, x)</c> <code>(x, y, z) => (z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzy(UnityEngine.Vector3)">
+            <summary>format to <c>(z, z, y)</c> <code>(x, y, z) => (z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzz(UnityEngine.Vector3)">
+            <summary>format to <c>(z, z, z)</c> <code>(x, y, z) => (z, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxxx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, x, x)</c> <code>(x, y, z, w) => (x, x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxxy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, x, y)</c> <code>(x, y, z, w) => (x, x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxxz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, x, z)</c> <code>(x, y, z, w) => (x, x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxxw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, x, w)</c> <code>(x, y, z, w) => (x, x, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxyx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, y, x)</c> <code>(x, y, z, w) => (x, x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxyy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, y, y)</c> <code>(x, y, z, w) => (x, x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxyz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, y, z)</c> <code>(x, y, z, w) => (x, x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxyw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, y, w)</c> <code>(x, y, z, w) => (x, x, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxzx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, z, x)</c> <code>(x, y, z, w) => (x, x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxzy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, z, y)</c> <code>(x, y, z, w) => (x, x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxzz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, z, z)</c> <code>(x, y, z, w) => (x, x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxzw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, z, w)</c> <code>(x, y, z, w) => (x, x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxwx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, w, x)</c> <code>(x, y, z, w) => (x, x, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxwy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, w, y)</c> <code>(x, y, z, w) => (x, x, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxwz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, w, z)</c> <code>(x, y, z, w) => (x, x, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxww(UnityEngine.Vector4)">
+            <summary>format to <c>(x, x, w, w)</c> <code>(x, y, z, w) => (x, x, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyxx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, x, x)</c> <code>(x, y, z, w) => (x, y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyxy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, x, y)</c> <code>(x, y, z, w) => (x, y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyxz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, x, z)</c> <code>(x, y, z, w) => (x, y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyxw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, x, w)</c> <code>(x, y, z, w) => (x, y, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyyx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, y, x)</c> <code>(x, y, z, w) => (x, y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyyy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, y, y)</c> <code>(x, y, z, w) => (x, y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyyz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, y, z)</c> <code>(x, y, z, w) => (x, y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyyw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, y, w)</c> <code>(x, y, z, w) => (x, y, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyzx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, z, x)</c> <code>(x, y, z, w) => (x, y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyzy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, z, y)</c> <code>(x, y, z, w) => (x, y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyzz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, z, z)</c> <code>(x, y, z, w) => (x, y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyzw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, z, w)</c> <code>(x, y, z, w) => (x, y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxywx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, w, x)</c> <code>(x, y, z, w) => (x, y, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxywy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, w, y)</c> <code>(x, y, z, w) => (x, y, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxywz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, w, z)</c> <code>(x, y, z, w) => (x, y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyww(UnityEngine.Vector4)">
+            <summary>format to <c>(x, y, w, w)</c> <code>(x, y, z, w) => (x, y, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzxx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, x, x)</c> <code>(x, y, z, w) => (x, z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzxy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, x, y)</c> <code>(x, y, z, w) => (x, z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzxz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, x, z)</c> <code>(x, y, z, w) => (x, z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzxw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, x, w)</c> <code>(x, y, z, w) => (x, z, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzyx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, y, x)</c> <code>(x, y, z, w) => (x, z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzyy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, y, y)</c> <code>(x, y, z, w) => (x, z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzyz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, y, z)</c> <code>(x, y, z, w) => (x, z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzyw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, y, w)</c> <code>(x, y, z, w) => (x, z, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzzx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, z, x)</c> <code>(x, y, z, w) => (x, z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzzy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, z, y)</c> <code>(x, y, z, w) => (x, z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzzz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, z, z)</c> <code>(x, y, z, w) => (x, z, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzzw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, z, w)</c> <code>(x, y, z, w) => (x, z, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzwx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, w, x)</c> <code>(x, y, z, w) => (x, z, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzwy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, w, y)</c> <code>(x, y, z, w) => (x, z, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzwz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, w, z)</c> <code>(x, y, z, w) => (x, z, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzww(UnityEngine.Vector4)">
+            <summary>format to <c>(x, z, w, w)</c> <code>(x, y, z, w) => (x, z, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwxx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, x, x)</c> <code>(x, y, z, w) => (x, w, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwxy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, x, y)</c> <code>(x, y, z, w) => (x, w, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwxz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, x, z)</c> <code>(x, y, z, w) => (x, w, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwxw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, x, w)</c> <code>(x, y, z, w) => (x, w, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwyx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, y, x)</c> <code>(x, y, z, w) => (x, w, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwyy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, y, y)</c> <code>(x, y, z, w) => (x, w, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwyz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, y, z)</c> <code>(x, y, z, w) => (x, w, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwyw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, y, w)</c> <code>(x, y, z, w) => (x, w, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwzx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, z, x)</c> <code>(x, y, z, w) => (x, w, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwzy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, z, y)</c> <code>(x, y, z, w) => (x, w, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwzz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, z, z)</c> <code>(x, y, z, w) => (x, w, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwzw(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, z, w)</c> <code>(x, y, z, w) => (x, w, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwwx(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, w, x)</c> <code>(x, y, z, w) => (x, w, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwwy(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, w, y)</c> <code>(x, y, z, w) => (x, w, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwwz(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, w, z)</c> <code>(x, y, z, w) => (x, w, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxwww(UnityEngine.Vector4)">
+            <summary>format to <c>(x, w, w, w)</c> <code>(x, y, z, w) => (x, w, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxxx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, x, x)</c> <code>(x, y, z, w) => (y, x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxxy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, x, y)</c> <code>(x, y, z, w) => (y, x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxxz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, x, z)</c> <code>(x, y, z, w) => (y, x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxxw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, x, w)</c> <code>(x, y, z, w) => (y, x, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxyx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, y, x)</c> <code>(x, y, z, w) => (y, x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxyy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, y, y)</c> <code>(x, y, z, w) => (y, x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxyz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, y, z)</c> <code>(x, y, z, w) => (y, x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxyw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, y, w)</c> <code>(x, y, z, w) => (y, x, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxzx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, z, x)</c> <code>(x, y, z, w) => (y, x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxzy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, z, y)</c> <code>(x, y, z, w) => (y, x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxzz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, z, z)</c> <code>(x, y, z, w) => (y, x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxzw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, z, w)</c> <code>(x, y, z, w) => (y, x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxwx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, w, x)</c> <code>(x, y, z, w) => (y, x, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxwy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, w, y)</c> <code>(x, y, z, w) => (y, x, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxwz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, w, z)</c> <code>(x, y, z, w) => (y, x, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxww(UnityEngine.Vector4)">
+            <summary>format to <c>(y, x, w, w)</c> <code>(x, y, z, w) => (y, x, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyxx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, x, x)</c> <code>(x, y, z, w) => (y, y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyxy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, x, y)</c> <code>(x, y, z, w) => (y, y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyxz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, x, z)</c> <code>(x, y, z, w) => (y, y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyxw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, x, w)</c> <code>(x, y, z, w) => (y, y, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyyx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, y, x)</c> <code>(x, y, z, w) => (y, y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyyy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, y, y)</c> <code>(x, y, z, w) => (y, y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyyz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, y, z)</c> <code>(x, y, z, w) => (y, y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyyw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, y, w)</c> <code>(x, y, z, w) => (y, y, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyzx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, z, x)</c> <code>(x, y, z, w) => (y, y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyzy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, z, y)</c> <code>(x, y, z, w) => (y, y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyzz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, z, z)</c> <code>(x, y, z, w) => (y, y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyzw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, z, w)</c> <code>(x, y, z, w) => (y, y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyywx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, w, x)</c> <code>(x, y, z, w) => (y, y, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyywy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, w, y)</c> <code>(x, y, z, w) => (y, y, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyywz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, w, z)</c> <code>(x, y, z, w) => (y, y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyww(UnityEngine.Vector4)">
+            <summary>format to <c>(y, y, w, w)</c> <code>(x, y, z, w) => (y, y, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzxx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, x, x)</c> <code>(x, y, z, w) => (y, z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzxy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, x, y)</c> <code>(x, y, z, w) => (y, z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzxz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, x, z)</c> <code>(x, y, z, w) => (y, z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzxw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, x, w)</c> <code>(x, y, z, w) => (y, z, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzyx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, y, x)</c> <code>(x, y, z, w) => (y, z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzyy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, y, y)</c> <code>(x, y, z, w) => (y, z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzyz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, y, z)</c> <code>(x, y, z, w) => (y, z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzyw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, y, w)</c> <code>(x, y, z, w) => (y, z, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzzx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, z, x)</c> <code>(x, y, z, w) => (y, z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzzy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, z, y)</c> <code>(x, y, z, w) => (y, z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzzz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, z, z)</c> <code>(x, y, z, w) => (y, z, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzzw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, z, w)</c> <code>(x, y, z, w) => (y, z, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzwx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, w, x)</c> <code>(x, y, z, w) => (y, z, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzwy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, w, y)</c> <code>(x, y, z, w) => (y, z, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzwz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, w, z)</c> <code>(x, y, z, w) => (y, z, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzww(UnityEngine.Vector4)">
+            <summary>format to <c>(y, z, w, w)</c> <code>(x, y, z, w) => (y, z, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywxx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, x, x)</c> <code>(x, y, z, w) => (y, w, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywxy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, x, y)</c> <code>(x, y, z, w) => (y, w, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywxz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, x, z)</c> <code>(x, y, z, w) => (y, w, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywxw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, x, w)</c> <code>(x, y, z, w) => (y, w, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywyx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, y, x)</c> <code>(x, y, z, w) => (y, w, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywyy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, y, y)</c> <code>(x, y, z, w) => (y, w, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywyz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, y, z)</c> <code>(x, y, z, w) => (y, w, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywyw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, y, w)</c> <code>(x, y, z, w) => (y, w, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywzx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, z, x)</c> <code>(x, y, z, w) => (y, w, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywzy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, z, y)</c> <code>(x, y, z, w) => (y, w, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywzz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, z, z)</c> <code>(x, y, z, w) => (y, w, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywzw(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, z, w)</c> <code>(x, y, z, w) => (y, w, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywwx(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, w, x)</c> <code>(x, y, z, w) => (y, w, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywwy(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, w, y)</c> <code>(x, y, z, w) => (y, w, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywwz(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, w, z)</c> <code>(x, y, z, w) => (y, w, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fywww(UnityEngine.Vector4)">
+            <summary>format to <c>(y, w, w, w)</c> <code>(x, y, z, w) => (y, w, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxxx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, x, x)</c> <code>(x, y, z, w) => (z, x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxxy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, x, y)</c> <code>(x, y, z, w) => (z, x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxxz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, x, z)</c> <code>(x, y, z, w) => (z, x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxxw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, x, w)</c> <code>(x, y, z, w) => (z, x, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxyx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, y, x)</c> <code>(x, y, z, w) => (z, x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxyy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, y, y)</c> <code>(x, y, z, w) => (z, x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxyz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, y, z)</c> <code>(x, y, z, w) => (z, x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxyw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, y, w)</c> <code>(x, y, z, w) => (z, x, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxzx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, z, x)</c> <code>(x, y, z, w) => (z, x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxzy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, z, y)</c> <code>(x, y, z, w) => (z, x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxzz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, z, z)</c> <code>(x, y, z, w) => (z, x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxzw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, z, w)</c> <code>(x, y, z, w) => (z, x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxwx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, w, x)</c> <code>(x, y, z, w) => (z, x, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxwy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, w, y)</c> <code>(x, y, z, w) => (z, x, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxwz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, w, z)</c> <code>(x, y, z, w) => (z, x, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxww(UnityEngine.Vector4)">
+            <summary>format to <c>(z, x, w, w)</c> <code>(x, y, z, w) => (z, x, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyxx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, x, x)</c> <code>(x, y, z, w) => (z, y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyxy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, x, y)</c> <code>(x, y, z, w) => (z, y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyxz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, x, z)</c> <code>(x, y, z, w) => (z, y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyxw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, x, w)</c> <code>(x, y, z, w) => (z, y, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyyx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, y, x)</c> <code>(x, y, z, w) => (z, y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyyy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, y, y)</c> <code>(x, y, z, w) => (z, y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyyz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, y, z)</c> <code>(x, y, z, w) => (z, y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyyw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, y, w)</c> <code>(x, y, z, w) => (z, y, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyzx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, z, x)</c> <code>(x, y, z, w) => (z, y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyzy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, z, y)</c> <code>(x, y, z, w) => (z, y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyzz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, z, z)</c> <code>(x, y, z, w) => (z, y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyzw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, z, w)</c> <code>(x, y, z, w) => (z, y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzywx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, w, x)</c> <code>(x, y, z, w) => (z, y, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzywy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, w, y)</c> <code>(x, y, z, w) => (z, y, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzywz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, w, z)</c> <code>(x, y, z, w) => (z, y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyww(UnityEngine.Vector4)">
+            <summary>format to <c>(z, y, w, w)</c> <code>(x, y, z, w) => (z, y, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzxx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, x, x)</c> <code>(x, y, z, w) => (z, z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzxy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, x, y)</c> <code>(x, y, z, w) => (z, z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzxz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, x, z)</c> <code>(x, y, z, w) => (z, z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzxw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, x, w)</c> <code>(x, y, z, w) => (z, z, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzyx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, y, x)</c> <code>(x, y, z, w) => (z, z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzyy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, y, y)</c> <code>(x, y, z, w) => (z, z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzyz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, y, z)</c> <code>(x, y, z, w) => (z, z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzyw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, y, w)</c> <code>(x, y, z, w) => (z, z, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzzx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, z, x)</c> <code>(x, y, z, w) => (z, z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzzy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, z, y)</c> <code>(x, y, z, w) => (z, z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzzz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, z, z)</c> <code>(x, y, z, w) => (z, z, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzzw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, z, w)</c> <code>(x, y, z, w) => (z, z, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzwx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, w, x)</c> <code>(x, y, z, w) => (z, z, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzwy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, w, y)</c> <code>(x, y, z, w) => (z, z, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzwz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, w, z)</c> <code>(x, y, z, w) => (z, z, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzww(UnityEngine.Vector4)">
+            <summary>format to <c>(z, z, w, w)</c> <code>(x, y, z, w) => (z, z, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwxx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, x, x)</c> <code>(x, y, z, w) => (z, w, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwxy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, x, y)</c> <code>(x, y, z, w) => (z, w, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwxz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, x, z)</c> <code>(x, y, z, w) => (z, w, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwxw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, x, w)</c> <code>(x, y, z, w) => (z, w, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwyx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, y, x)</c> <code>(x, y, z, w) => (z, w, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwyy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, y, y)</c> <code>(x, y, z, w) => (z, w, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwyz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, y, z)</c> <code>(x, y, z, w) => (z, w, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwyw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, y, w)</c> <code>(x, y, z, w) => (z, w, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwzx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, z, x)</c> <code>(x, y, z, w) => (z, w, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwzy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, z, y)</c> <code>(x, y, z, w) => (z, w, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwzz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, z, z)</c> <code>(x, y, z, w) => (z, w, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwzw(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, z, w)</c> <code>(x, y, z, w) => (z, w, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwwx(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, w, x)</c> <code>(x, y, z, w) => (z, w, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwwy(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, w, y)</c> <code>(x, y, z, w) => (z, w, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwwz(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, w, z)</c> <code>(x, y, z, w) => (z, w, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzwww(UnityEngine.Vector4)">
+            <summary>format to <c>(z, w, w, w)</c> <code>(x, y, z, w) => (z, w, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxxx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, x, x)</c> <code>(x, y, z, w) => (w, x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxxy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, x, y)</c> <code>(x, y, z, w) => (w, x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxxz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, x, z)</c> <code>(x, y, z, w) => (w, x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxxw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, x, w)</c> <code>(x, y, z, w) => (w, x, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxyx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, y, x)</c> <code>(x, y, z, w) => (w, x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxyy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, y, y)</c> <code>(x, y, z, w) => (w, x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxyz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, y, z)</c> <code>(x, y, z, w) => (w, x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxyw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, y, w)</c> <code>(x, y, z, w) => (w, x, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxzx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, z, x)</c> <code>(x, y, z, w) => (w, x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxzy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, z, y)</c> <code>(x, y, z, w) => (w, x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxzz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, z, z)</c> <code>(x, y, z, w) => (w, x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxzw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, z, w)</c> <code>(x, y, z, w) => (w, x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxwx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, w, x)</c> <code>(x, y, z, w) => (w, x, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxwy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, w, y)</c> <code>(x, y, z, w) => (w, x, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxwz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, w, z)</c> <code>(x, y, z, w) => (w, x, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwxww(UnityEngine.Vector4)">
+            <summary>format to <c>(w, x, w, w)</c> <code>(x, y, z, w) => (w, x, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyxx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, x, x)</c> <code>(x, y, z, w) => (w, y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyxy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, x, y)</c> <code>(x, y, z, w) => (w, y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyxz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, x, z)</c> <code>(x, y, z, w) => (w, y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyxw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, x, w)</c> <code>(x, y, z, w) => (w, y, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyyx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, y, x)</c> <code>(x, y, z, w) => (w, y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyyy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, y, y)</c> <code>(x, y, z, w) => (w, y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyyz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, y, z)</c> <code>(x, y, z, w) => (w, y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyyw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, y, w)</c> <code>(x, y, z, w) => (w, y, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyzx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, z, x)</c> <code>(x, y, z, w) => (w, y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyzy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, z, y)</c> <code>(x, y, z, w) => (w, y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyzz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, z, z)</c> <code>(x, y, z, w) => (w, y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyzw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, z, w)</c> <code>(x, y, z, w) => (w, y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwywx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, w, x)</c> <code>(x, y, z, w) => (w, y, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwywy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, w, y)</c> <code>(x, y, z, w) => (w, y, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwywz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, w, z)</c> <code>(x, y, z, w) => (w, y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwyww(UnityEngine.Vector4)">
+            <summary>format to <c>(w, y, w, w)</c> <code>(x, y, z, w) => (w, y, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzxx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, x, x)</c> <code>(x, y, z, w) => (w, z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzxy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, x, y)</c> <code>(x, y, z, w) => (w, z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzxz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, x, z)</c> <code>(x, y, z, w) => (w, z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzxw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, x, w)</c> <code>(x, y, z, w) => (w, z, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzyx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, y, x)</c> <code>(x, y, z, w) => (w, z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzyy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, y, y)</c> <code>(x, y, z, w) => (w, z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzyz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, y, z)</c> <code>(x, y, z, w) => (w, z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzyw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, y, w)</c> <code>(x, y, z, w) => (w, z, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzzx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, z, x)</c> <code>(x, y, z, w) => (w, z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzzy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, z, y)</c> <code>(x, y, z, w) => (w, z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzzz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, z, z)</c> <code>(x, y, z, w) => (w, z, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzzw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, z, w)</c> <code>(x, y, z, w) => (w, z, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzwx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, w, x)</c> <code>(x, y, z, w) => (w, z, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzwy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, w, y)</c> <code>(x, y, z, w) => (w, z, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzwz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, w, z)</c> <code>(x, y, z, w) => (w, z, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwzww(UnityEngine.Vector4)">
+            <summary>format to <c>(w, z, w, w)</c> <code>(x, y, z, w) => (w, z, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwxx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, x, x)</c> <code>(x, y, z, w) => (w, w, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwxy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, x, y)</c> <code>(x, y, z, w) => (w, w, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwxz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, x, z)</c> <code>(x, y, z, w) => (w, w, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwxw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, x, w)</c> <code>(x, y, z, w) => (w, w, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwyx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, y, x)</c> <code>(x, y, z, w) => (w, w, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwyy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, y, y)</c> <code>(x, y, z, w) => (w, w, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwyz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, y, z)</c> <code>(x, y, z, w) => (w, w, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwyw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, y, w)</c> <code>(x, y, z, w) => (w, w, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwzx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, z, x)</c> <code>(x, y, z, w) => (w, w, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwzy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, z, y)</c> <code>(x, y, z, w) => (w, w, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwzz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, z, z)</c> <code>(x, y, z, w) => (w, w, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwzw(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, z, w)</c> <code>(x, y, z, w) => (w, w, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwwx(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, w, x)</c> <code>(x, y, z, w) => (w, w, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwwy(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, w, y)</c> <code>(x, y, z, w) => (w, w, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwwz(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, w, z)</c> <code>(x, y, z, w) => (w, w, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fwwww(UnityEngine.Vector4)">
+            <summary>format to <c>(w, w, w, w)</c> <code>(x, y, z, w) => (w, w, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nx(UnityEngine.Vector3)">
+            <summary>remove <c>x</c> <code>(x, y, z) => (y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ny(UnityEngine.Vector3)">
+            <summary>remove <c>y</c> <code>(x, y, z) => (x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nz(UnityEngine.Vector3)">
+            <summary>remove <c>z</c> <code>(x, y, z) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nx(UnityEngine.Vector4)">
+            <summary>remove <c>x</c> <code>(x, y, z, w) => (y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ny(UnityEngine.Vector4)">
+            <summary>remove <c>y</c> <code>(x, y, z, w) => (x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nz(UnityEngine.Vector4)">
+            <summary>remove <c>z</c> <code>(x, y, z, w) => (x, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nw(UnityEngine.Vector4)">
+            <summary>remove <c>w</c> <code>(x, y, z, w) => (x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nxy(UnityEngine.Vector4)">
+            <summary>remove <c>x &amp; y</c> <code>(x, y, z, w) => (z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nxz(UnityEngine.Vector4)">
+            <summary>remove <c>x &amp; z</c> <code>(x, y, z, w) => (y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nxw(UnityEngine.Vector4)">
+            <summary>remove <c>x &amp; w</c> <code>(x, y, z, w) => (y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nyz(UnityEngine.Vector4)">
+            <summary>remove <c>y &amp; z</c> <code>(x, y, z, w) => (x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nyw(UnityEngine.Vector4)">
+            <summary>remove <c>y &amp; w</c> <code>(x, y, z, w) => (x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nzw(UnityEngine.Vector4)">
+            <summary>remove <c>z &amp; w</c> <code>(x, y, z, w) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txx(UnityEngine.Vector3)">
+            <summary>take <c>x &amp; x</c> <code>(x, y, z) => (x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txy(UnityEngine.Vector3)">
+            <summary>take <c>x &amp; y</c> <code>(x, y, z) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txz(UnityEngine.Vector3)">
+            <summary>take <c>x &amp; z</c> <code>(x, y, z) => (x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyx(UnityEngine.Vector3)">
+            <summary>take <c>y &amp; x</c> <code>(x, y, z) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyy(UnityEngine.Vector3)">
+            <summary>take <c>y &amp; y</c> <code>(x, y, z) => (y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyz(UnityEngine.Vector3)">
+            <summary>take <c>y &amp; z</c> <code>(x, y, z) => (y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzx(UnityEngine.Vector3)">
+            <summary>take <c>z &amp; x</c> <code>(x, y, z) => (z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzy(UnityEngine.Vector3)">
+            <summary>take <c>z &amp; y</c> <code>(x, y, z) => (z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzz(UnityEngine.Vector3)">
+            <summary>take <c>z &amp; z</c> <code>(x, y, z) => (z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txxx(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; x &amp; x</c> <code>(x, y, z) => (x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txxy(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; x &amp; y</c> <code>(x, y, z) => (x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txxz(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; x &amp; z</c> <code>(x, y, z) => (x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txxw(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; x &amp; w</c> <code>(x, y, z) => (x, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txyx(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; y &amp; x</c> <code>(x, y, z) => (x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txyy(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; y &amp; y</c> <code>(x, y, z) => (x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txyz(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; y &amp; z</c> <code>(x, y, z) => (x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txyw(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; y &amp; w</c> <code>(x, y, z) => (x, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txzx(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; z &amp; x</c> <code>(x, y, z) => (x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txzy(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; z &amp; y</c> <code>(x, y, z) => (x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txzz(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; z &amp; z</c> <code>(x, y, z) => (x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txzw(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; z &amp; w</c> <code>(x, y, z) => (x, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txwx(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; w &amp; x</c> <code>(x, y, z) => (x, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txwy(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; w &amp; y</c> <code>(x, y, z) => (x, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txwz(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; w &amp; z</c> <code>(x, y, z) => (x, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txww(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; w &amp; w</c> <code>(x, y, z) => (x, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyxx(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; x &amp; x</c> <code>(x, y, z) => (y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyxy(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; x &amp; y</c> <code>(x, y, z) => (y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyxz(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; x &amp; z</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyxw(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; x &amp; w</c> <code>(x, y, z) => (y, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyyx(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; y &amp; x</c> <code>(x, y, z) => (y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyyy(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; y &amp; y</c> <code>(x, y, z) => (y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyyz(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; y &amp; z</c> <code>(x, y, z) => (y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyyw(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; y &amp; w</c> <code>(x, y, z) => (y, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyzx(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; z &amp; x</c> <code>(x, y, z) => (y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyzy(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; z &amp; y</c> <code>(x, y, z) => (y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyzz(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; z &amp; z</c> <code>(x, y, z) => (y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyzw(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; z &amp; w</c> <code>(x, y, z) => (y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tywx(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; w &amp; x</c> <code>(x, y, z) => (y, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tywy(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; w &amp; y</c> <code>(x, y, z) => (y, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tywz(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; w &amp; z</c> <code>(x, y, z) => (y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyww(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; w &amp; w</c> <code>(x, y, z) => (y, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzxx(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; x &amp; x</c> <code>(x, y, z) => (z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzxy(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; x &amp; y</c> <code>(x, y, z) => (z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzxz(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; x &amp; z</c> <code>(x, y, z) => (z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzxw(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; x &amp; w</c> <code>(x, y, z) => (z, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzyx(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; y &amp; x</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzyy(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; y &amp; y</c> <code>(x, y, z) => (z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzyz(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; y &amp; z</c> <code>(x, y, z) => (z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzyw(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; y &amp; w</c> <code>(x, y, z) => (z, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzzx(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; z &amp; x</c> <code>(x, y, z) => (z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzzy(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; z &amp; y</c> <code>(x, y, z) => (z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzzz(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; z &amp; z</c> <code>(x, y, z) => (z, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzzw(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; z &amp; w</c> <code>(x, y, z) => (z, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzwx(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; w &amp; x</c> <code>(x, y, z) => (z, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzwy(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; w &amp; y</c> <code>(x, y, z) => (z, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzwz(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; w &amp; z</c> <code>(x, y, z) => (z, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzww(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; w &amp; w</c> <code>(x, y, z) => (z, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twxx(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; x &amp; x</c> <code>(x, y, z) => (w, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twxy(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; x &amp; y</c> <code>(x, y, z) => (w, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twxz(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; x &amp; z</c> <code>(x, y, z) => (w, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twxw(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; x &amp; w</c> <code>(x, y, z) => (w, x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twyx(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; y &amp; x</c> <code>(x, y, z) => (w, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twyy(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; y &amp; y</c> <code>(x, y, z) => (w, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twyz(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; y &amp; z</c> <code>(x, y, z) => (w, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twyw(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; y &amp; w</c> <code>(x, y, z) => (w, y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twzx(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; z &amp; x</c> <code>(x, y, z) => (w, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twzy(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; z &amp; y</c> <code>(x, y, z) => (w, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twzz(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; z &amp; z</c> <code>(x, y, z) => (w, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twzw(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; z &amp; w</c> <code>(x, y, z) => (w, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twwx(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; w &amp; x</c> <code>(x, y, z) => (w, w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twwy(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; w &amp; y</c> <code>(x, y, z) => (w, w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twwz(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; w &amp; z</c> <code>(x, y, z) => (w, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twww(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; w &amp; w</c> <code>(x, y, z) => (w, w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txx(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; x</c> <code>(x, y, z) => (x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txy(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; y</c> <code>(x, y, z) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txz(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; z</c> <code>(x, y, z) => (x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txw(UnityEngine.Vector4)">
+            <summary>take <c>x &amp; w</c> <code>(x, y, z) => (x, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyx(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; x</c> <code>(x, y, z) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyy(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; y</c> <code>(x, y, z) => (y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyz(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; z</c> <code>(x, y, z) => (y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyw(UnityEngine.Vector4)">
+            <summary>take <c>y &amp; w</c> <code>(x, y, z) => (y, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzx(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; x</c> <code>(x, y, z) => (z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzy(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; y</c> <code>(x, y, z) => (z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzz(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; z</c> <code>(x, y, z) => (z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzw(UnityEngine.Vector4)">
+            <summary>take <c>z &amp; w</c> <code>(x, y, z) => (z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twx(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; x</c> <code>(x, y, z) => (w, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twy(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; y</c> <code>(x, y, z) => (w, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Twz(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; z</c> <code>(x, y, z) => (w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tww(UnityEngine.Vector4)">
+            <summary>take <c>w &amp; w</c> <code>(x, y, z) => (w, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ix(UnityEngine.Vector2,System.Single)">
+            <summary>insert <c>X</c> <code>(x, y) => (X, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iy(UnityEngine.Vector2,System.Single)">
+            <summary>insert <c>Y</c> <code>(x, y) => (x, Y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iz(UnityEngine.Vector2,System.Single)">
+            <summary>insert <c>Z</c> <code>(x, y) => (x, y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ix(UnityEngine.Vector3,System.Single)">
+            <summary>insert <c>X</c> <code>(x, y, z) => (X, x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iy(UnityEngine.Vector3,System.Single)">
+            <summary>insert <c>Y</c> <code>(x, y, z) => (x, Y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iz(UnityEngine.Vector3,System.Single)">
+            <summary>insert <c>Z</c> <code>(x, y, z) => (x, y, Z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iw(UnityEngine.Vector3,System.Single)">
+            <summary>insert <c>W</c> <code>(x, y, z) => (x, y, z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ixy(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>insert <c>(X, Y)</c> <code>(x, y) => (X, Y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iyz(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>insert <c>(Y, Z)</c> <code>(x, y) => (x, Y, Z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Izw(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>insert <c>(Z, W)</c> <code>(x, y) => (x, y, Z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ixz(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>insert <c>(X, Z)</c> <code>(x, y) => (X, x, Z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iyw(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>insert <c>(Y, W)</c> <code>(x, y) => (x, Y, y, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ixw(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>insert <c>(X, W)</c> <code>(x, y) => (X, x, y, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ixy(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>insert <c>(X, Y)</c> <code>(x, y) => (X, Y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iyz(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>insert <c>(Y, Z)</c> <code>(x, y) => (x, Y, Z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Izw(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>insert <c>(Z, W)</c> <code>(x, y) => (x, y, Z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ixz(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>insert <c>(X, Z)</c> <code>(x, y) => (X, x, Z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iyw(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>insert <c>(Y, W)</c> <code>(x, y) => (x, Y, y, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ixw(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>insert <c>(X, W)</c> <code>(x, y) => (X, x, y, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rx(UnityEngine.Vector2,System.Single)">
+            <summary>replace <c>x</c> <code>(x, y) => (X, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ry(UnityEngine.Vector2,System.Single)">
+            <summary>replace <c>y</c> <code>(x, y) => (x, Y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rx(UnityEngine.Vector3,System.Single)">
+            <summary>replace <c>x</c> <code>(x, y, z) => (X, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ry(UnityEngine.Vector3,System.Single)">
+            <summary>replace <c>y</c> <code>(x, y, z) => (x, Y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rz(UnityEngine.Vector3,System.Single)">
+            <summary>replace <c>z</c> <code>(x, y, z) => (x, y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxy(UnityEngine.Vector3,System.Single,System.Single)">
+            <summary>replace <c>x &amp; y</c> <code>(x, y, z) => (X, Y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ryz(UnityEngine.Vector3,System.Single,System.Single)">
+            <summary>replace <c>y &amp; z</c> <code>(x, y, z) => (x, Y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxz(UnityEngine.Vector3,System.Single,System.Single)">
+            <summary>replace <c>x &amp; z</c> <code>(x, y, z) => (X, y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rx(UnityEngine.Vector4,System.Single)">
+            <summary>replace <c>x</c> <code>(x, y, z, w) => (X, y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ry(UnityEngine.Vector4,System.Single)">
+            <summary>replace <c>y</c> <code>(x, y, z, w) => (x, Y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rz(UnityEngine.Vector4,System.Single)">
+            <summary>replace <c>z</c> <code>(x, y, z, w) => (x, y, Z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rw(UnityEngine.Vector4,System.Single)">
+            <summary>replace <c>w</c> <code>(x, y, z, w) => (x, y, z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxy(UnityEngine.Vector4,System.Single,System.Single)">
+            <summary>replace <c>x &amp; y</c> <code>(x, y, z, w) => (X, Y, z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ryz(UnityEngine.Vector4,System.Single,System.Single)">
+            <summary>replace <c>y &amp; z</c> <code>(x, y, z, w) => (x, Y, Z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rzw(UnityEngine.Vector4,System.Single,System.Single)">
+            <summary>replace <c>z &amp; w</c> <code>(x, y, z, w) => (x, y, Z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxw(UnityEngine.Vector4,System.Single,System.Single)">
+            <summary>replace <c>x &amp; w</c> <code>(x, y, z, w) => (X, y, z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxz(UnityEngine.Vector4,System.Single,System.Single)">
+            <summary>replace <c>x &amp; z</c> <code>(x, y, z, w) => (X, y, Z, w)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ryw(UnityEngine.Vector4,System.Single,System.Single)">
+            <summary>replace <c>y &amp; w</c> <code>(x, y, z, w) => (x, Y, z, W)</code></summary>
+        </member>
+    </members>
+</doc>
