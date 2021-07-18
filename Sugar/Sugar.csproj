@@ -29,6 +29,7 @@
     <ItemGroup>
       <Reference Include="UnityEngine">
         <HintPath>..\Lib\UnityEngine.dll</HintPath>
+        <Private>false</Private>
       </Reference>
     </ItemGroup>
 
@@ -44,7 +45,7 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="copy &quot;$(OutDir)\*.*&quot; &quot;$(SolutionDir)\Pack&quot;" />
+      <Exec Command="copy &quot;$(OutDir)\*.*&quot; &quot;$(SolutionDir)\Runtime&quot;" />
     </Target>
 
 </Project>
