@@ -12,7 +12,7 @@
         <PackageVersion>0.1.0</PackageVersion>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/libsugar/SugarUnity</PackageProjectUrl>
         <Description>Like syntactic sugar, but is library</Description>
         <Company>libsugar</Company>
@@ -37,10 +37,14 @@
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
-      <None Include="..\LICENSE">
+      <None Include="..\LICENSE.md">
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
     </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="copy &quot;$(OutDir)\*.*&quot; &quot;$(SolutionDir)\Pack&quot;" />
+    </Target>
 
 </Project>

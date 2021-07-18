@@ -1,0 +1,27 @@
+{
+  "name": "com.libsugar.sugar.unity",
+  "displayName": "SugarUnity",
+  "version": "0.1.0",
+  "unity": "2021.1",
+  "description": "Like syntactic sugar, but is library",
+  "files": [
+    "./**/*.dll",
+    "./**/*.pdb",
+    "../CHANGELOG.md",
+    "../LICENSE.md",
+    "../README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libsugar/SugarUnity.git"
+  },
+  "keywords": [
+    "unity", "libsugar", "utility"
+  ],
+  "author": "libsugar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/libsugar/SugarUnity/issues"
+  },
+  "homepage": "https://github.com/libsugar/SugarUnity#readme"
+}
