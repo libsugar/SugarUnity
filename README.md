@@ -19,7 +19,7 @@ Like syntactic sugar, but is library
 
 - Unity Package by [npmjs](https://www.npmjs.com/package/com.libsugar.sugar.unity)
 
-  Edit your `Packages/manifest.json`
+  Edit your `Packages/manifest.json` file like this
 
   ```json
   {
