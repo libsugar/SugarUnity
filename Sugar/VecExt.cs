@@ -1,4 +1,4 @@
-using System;
+锘縰sing System;
 using UnityEngine;
 
 // ReSharper disable IdentifierTypo
@@ -1093,7 +1093,7 @@ namespace LibSugar.Unity
         public static float Length(this Vector2 self) => Mathf.Sqrt(self.Dot(self));
         /// <summary>length squared <code>(x, y) => length squared</code></summary>
         public static float LengthSquared(this Vector2 self) => self.Dot(self);
-        /// <summary>dot <code>(x, y) · (a, b) => dot product</code></summary>
+        /// <summary>dot <code>(x, y) 路 (a, b) => dot product</code></summary>
         public static float Dot(this Vector2 self, Vector2 other) => Vector2.Dot(self, other);
         /// <summary>lerp <code>(x, y) ~amount~ (a, b) => (x~amount~a, y~amount~b)</code></summary>
         public static Vector2 Lerp(this Vector2 self, Vector2 other, float amount) => Vector2.Lerp(self, other, amount);
@@ -1116,9 +1116,9 @@ namespace LibSugar.Unity
         public static float Length(this Vector3 self) => Mathf.Sqrt(self.Dot(self));
         /// <summary>length squared <code>(x, y, z) => length squared</code></summary>
         public static float LengthSquared(this Vector3 self) => self.Dot(self);
-        /// <summary>dot <code>(x, y, z) · (a, b, c) => dot product</code></summary>
+        /// <summary>dot <code>(x, y, z) 路 (a, b, c) => dot product</code></summary>
         public static float Dot(this Vector3 self, Vector3 other) => Vector3.Dot(self, other);
-        /// <summary>cross <code>(x, y, z) × (a, b, c) => (cx, cy, cz)</code></summary>
+        /// <summary>cross <code>(x, y, z) 脳 (a, b, c) => (cx, cy, cz)</code></summary>
         public static Vector3 Cross(this Vector3 self, Vector3 other) => Vector3.Cross(self, other);
         /// <summary>lerp <code>(x, y, z) ~t~ (a, b, c) => (x ~t~ a, y ~t~ b, z ~t~ c)</code></summary>
         public static Vector3 Lerp(this Vector3 self, Vector3 other, float amount) => Vector3.Lerp(self, other, amount);
@@ -1141,7 +1141,7 @@ namespace LibSugar.Unity
         public static float Length(this Vector4 self) => Mathf.Sqrt(self.Dot(self));
         /// <summary>length squared <code>(x, y, z, w) => length squared</code></summary>
         public static float LengthSquared(this Vector4 self) => self.Dot(self);
-        /// <summary>dot <code>(x, y, z, w) · (a, b, c, d) => dot product</code></summary>
+        /// <summary>dot <code>(x, y, z, w) 路 (a, b, c, d) => dot product</code></summary>
         public static float Dot(this Vector4 self, Vector4 other) => Vector4.Dot(self, other);
         /// <summary>lerp <code>(x, y, z, w) ~t~ (a, b, c, d) => (x ~t~ a, y ~t~ b, z ~t~ c, w ~t~ d)</code></summary>
         public static Vector4 Lerp(this Vector4 self, Vector4 other, float amount) => Vector4.Lerp(self, other, amount);
@@ -1164,7 +1164,7 @@ namespace LibSugar.Unity
         public static float Length(this Vector2Int self) => Mathf.Sqrt(self.Dot(self));
         /// <summary>length squared <code>(x, y) => length squared</code></summary>
         public static int LengthSquared(this Vector2Int self) => self.Dot(self);
-        /// <summary>dot <code>(x, y) · (a, b) => dot product</code></summary>
+        /// <summary>dot <code>(x, y) 路 (a, b) => dot product</code></summary>
         public static int Dot(this Vector2Int self, Vector2Int other) => self.x * other.x + self.y * other.y;
 
         /// <summary>abs <code>(x, y, z) => (abs(x), abs(y), abs(z))</code></summary>
@@ -1185,9 +1185,9 @@ namespace LibSugar.Unity
         public static float Length(this Vector3Int self) => Mathf.Sqrt(self.Dot(self));
         /// <summary>length squared <code>(x, y, z) => length squared</code></summary>
         public static float LengthSquared(this Vector3Int self) => self.Dot(self);
-        /// <summary>dot <code>(x, y, z) · (a, b, c) => dot product</code></summary>
+        /// <summary>dot <code>(x, y, z) 路 (a, b, c) => dot product</code></summary>
         public static float Dot(this Vector3Int self, Vector3Int other) => self.x * other.x + self.y * other.y + self.z * other.z;
-        /// <summary>cross <code>(x, y, z) × (a, b, c) => (cx, cy, cz)</code></summary>
+        /// <summary>cross <code>(x, y, z) 脳 (a, b, c) => (cx, cy, cz)</code></summary>
         public static Vector3Int Cross(this Vector3Int self, Vector3Int other) => (self.Mul(other.Fyzx()) - self.Fyzx().Mul(other)).Fyzx();
 
         #endregion
