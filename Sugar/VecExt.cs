@@ -5,34 +5,43 @@ using UnityEngine;
 
 namespace LibSugar.Unity
 {
+    /// <summary>
+    /// Vector Ext
+    /// </summary>
     public static class VecExt
     {
-        
+
         #region select
 
         /// <summary>select by <c>f</c> <code>(x, y) => (f(x), f(y))</code></summary>
         public static Vector2 Select(this Vector2 self, Func<float, float> f) => new(f(self.x), f(self.y));
-        
+
         /// <summary>select by <c>f</c> <code>(x, y, z) => (f(x), f(y), f(z))</code></summary>
         public static Vector3 Select(this Vector3 self, Func<float, float> f) => new(f(self.x), f(self.y), f(self.z));
-        
+
         /// <summary>select by <c>f</c> <code>(x, y, z, w) => (f(x), f(y), f(z), f(w))</code></summary>
         public static Vector4 Select(this Vector4 self, Func<float, float> f) => new(f(self.x), f(self.y), f(self.z), f(self.w));
+
+        /// <summary>select by <c>f</c> <code>(x, y) => (f(x), f(y))</code></summary>
+        public static Vector2Int Select(this Vector2Int self, Func<int, int> f) => new(f(self.x), f(self.y));
+
+        /// <summary>select by <c>f</c> <code>(x, y, z) => (f(x), f(y), f(z))</code></summary>
+        public static Vector3Int Select(this Vector3Int self, Func<int, int> f) => new(f(self.x), f(self.y), f(self.z));
 
         #endregion
 
         #region swap
-        
+
         /// <summary>swap <c>x &lt;=> y</c> <code>(x, y) => (y, x)</code></summary>
         public static Vector2 Syx(this Vector2 self) => new(self.y, self.x);
-        
+
         /// <summary>swap <c>x &lt;=> y</c> <code>(x, y, z) => (y, x, z)</code></summary>
         public static Vector3 Syx(this Vector3 self) => new(self.y, self.x, self.z);
         /// <summary>swap <c>x &lt;=> z</c> <code>(x, y, z) => (z, y, x)</code></summary>
         public static Vector3 Szx(this Vector3 self) => new(self.z, self.y, self.x);
         /// <summary>swap <c>y &lt;=> z</c> <code>(x, y, z) => (x, z, y)</code></summary>
         public static Vector3 Szy(this Vector3 self) => new(self.x, self.z, self.y);
-        
+
         /// <summary>swap <c>x &lt;=> y</c> <code>(x, y, z, w) => (y, x, z, w)</code></summary>
         public static Vector4 Syx(this Vector4 self) => new(self.y, self.x, self.z, self.w);
         /// <summary>swap <c>x &lt;=> z</c> <code>(x, y, z, w) => (z, y, x, w)</code></summary>
@@ -45,7 +54,17 @@ namespace LibSugar.Unity
         public static Vector4 Swy(this Vector4 self) => new(self.x, self.w, self.z, self.y);
         /// <summary>swap <c>z &lt;=> w</c> <code>(x, y, z, w) => (x, y, w, z)</code></summary>
         public static Vector4 Swz(this Vector4 self) => new(self.x, self.y, self.w, self.z);
-        
+
+        /// <summary>swap <c>x &lt;=> y</c> <code>(x, y) => (y, x)</code></summary>
+        public static Vector2Int Syx(this Vector2Int self) => new(self.y, self.x);
+
+        /// <summary>swap <c>x &lt;=> y</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        public static Vector3Int Syx(this Vector3Int self) => new(self.y, self.x, self.z);
+        /// <summary>swap <c>x &lt;=> z</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        public static Vector3Int Szx(this Vector3Int self) => new(self.z, self.y, self.x);
+        /// <summary>swap <c>y &lt;=> z</c> <code>(x, y, z) => (x, z, y)</code></summary>
+        public static Vector3Int Szy(this Vector3Int self) => new(self.x, self.z, self.y);
+
         #endregion
 
         #region format
@@ -58,7 +77,7 @@ namespace LibSugar.Unity
         public static Vector2 Fyx(this Vector2 self) => new(self.y, self.x);
         /// <summary>format to <c>(y, y)</c> <code>(x, y) => (y, y)</code></summary>
         public static Vector2 Fyy(this Vector2 self) => new(self.y, self.y);
-        
+
         /// <summary>format to <c>(x, x, x)</c> <code>(x, y, z) => (x, x, x)</code></summary>
         public static Vector3 Fxxx(this Vector3 self) => new(self.x, self.x, self.x);
         /// <summary>format to <c>(x, x, y)</c> <code>(x, y, z) => (x, x, y)</code></summary>
@@ -113,7 +132,7 @@ namespace LibSugar.Unity
         public static Vector3 Fzzy(this Vector3 self) => new(self.z, self.z, self.y);
         /// <summary>format to <c>(z, z, z)</c> <code>(x, y, z) => (z, z, z)</code></summary>
         public static Vector3 Fzzz(this Vector3 self) => new(self.z, self.z, self.z);
-        
+
         /// <summary>format to <c>(x, x, x, x)</c> <code>(x, y, z, w) => (x, x, x, x)</code></summary>
         public static Vector4 Fxxxx(this Vector4 self) => new(self.x, self.x, self.x, self.x);
         /// <summary>format to <c>(x, x, x, y)</c> <code>(x, y, z, w) => (x, x, x, y)</code></summary>
@@ -627,6 +646,70 @@ namespace LibSugar.Unity
         /// <summary>format to <c>(w, w, w, w)</c> <code>(x, y, z, w) => (w, w, w, w)</code></summary>
         public static Vector4 Fwwww(this Vector4 self) => new(self.w, self.w, self.w, self.w);
 
+        /// <summary>format to <c>(x, x)</c> <code>(x, y) => (x, x)</code></summary>
+        public static Vector2Int Fxx(this Vector2Int self) => new(self.x, self.x);
+        /// <summary>format to <c>(x, y)</c> <code>(x, y) => (x, y)</code></summary>
+        public static Vector2Int Fxy(this Vector2Int self) => new(self.x, self.y);
+        /// <summary>format to <c>(y, x)</c> <code>(x, y) => (y, x)</code></summary>
+        public static Vector2Int Fyx(this Vector2Int self) => new(self.y, self.x);
+        /// <summary>format to <c>(y, y)</c> <code>(x, y) => (y, y)</code></summary>
+        public static Vector2Int Fyy(this Vector2Int self) => new(self.y, self.y);
+
+        /// <summary>format to <c>(x, x, x)</c> <code>(x, y, z) => (x, x, x)</code></summary>
+        public static Vector3Int Fxxx(this Vector3Int self) => new(self.x, self.x, self.x);
+        /// <summary>format to <c>(x, x, y)</c> <code>(x, y, z) => (x, x, y)</code></summary>
+        public static Vector3Int Fxxy(this Vector3Int self) => new(self.x, self.x, self.y);
+        /// <summary>format to <c>(x, x, z)</c> <code>(x, y, z) => (x, x, z)</code></summary>
+        public static Vector3Int Fxxz(this Vector3Int self) => new(self.x, self.x, self.z);
+        /// <summary>format to <c>(x, y, x)</c> <code>(x, y, z) => (x, y, x)</code></summary>
+        public static Vector3Int Fxyx(this Vector3Int self) => new(self.x, self.y, self.x);
+        /// <summary>format to <c>(x, y, y)</c> <code>(x, y, z) => (x, y, y)</code></summary>
+        public static Vector3Int Fxyy(this Vector3Int self) => new(self.x, self.y, self.y);
+        /// <summary>format to <c>(x, y, z)</c> <code>(x, y, z) => (x, y, z)</code></summary>
+        public static Vector3Int Fxyz(this Vector3Int self) => new(self.x, self.y, self.z);
+        /// <summary>format to <c>(x, z, x)</c> <code>(x, y, z) => (x, z, x)</code></summary>
+        public static Vector3Int Fxzx(this Vector3Int self) => new(self.x, self.z, self.x);
+        /// <summary>format to <c>(x, z, y)</c> <code>(x, y, z) => (x, z, y)</code></summary>
+        public static Vector3Int Fxzy(this Vector3Int self) => new(self.x, self.z, self.y);
+        /// <summary>format to <c>(x, z, z)</c> <code>(x, y, z) => (x, z, z)</code></summary>
+        public static Vector3Int Fxzz(this Vector3Int self) => new(self.x, self.z, self.z);
+        /// <summary>format to <c>(y, x, x)</c> <code>(x, y, z) => (y, x, x)</code></summary>
+        public static Vector3Int Fyxx(this Vector3Int self) => new(self.y, self.x, self.x);
+        /// <summary>format to <c>(y, x, y)</c> <code>(x, y, z) => (y, x, y)</code></summary>
+        public static Vector3Int Fyxy(this Vector3Int self) => new(self.y, self.x, self.y);
+        /// <summary>format to <c>(y, x, z)</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        public static Vector3Int Fyxz(this Vector3Int self) => new(self.y, self.x, self.z);
+        /// <summary>format to <c>(y, y, x)</c> <code>(x, y, z) => (y, y, x)</code></summary>
+        public static Vector3Int Fyyx(this Vector3Int self) => new(self.y, self.y, self.x);
+        /// <summary>format to <c>(y, y, y)</c> <code>(x, y, z) => (y, y, y)</code></summary>
+        public static Vector3Int Fyyy(this Vector3Int self) => new(self.y, self.y, self.y);
+        /// <summary>format to <c>(y, y, z)</c> <code>(x, y, z) => (y, y, z)</code></summary>
+        public static Vector3Int Fyyz(this Vector3Int self) => new(self.y, self.y, self.z);
+        /// <summary>format to <c>(y, z, x)</c> <code>(x, y, z) => (y, z, x)</code></summary>
+        public static Vector3Int Fyzx(this Vector3Int self) => new(self.y, self.z, self.x);
+        /// <summary>format to <c>(y, z, y)</c> <code>(x, y, z) => (y, z, y)</code></summary>
+        public static Vector3Int Fyzy(this Vector3Int self) => new(self.y, self.z, self.y);
+        /// <summary>format to <c>(y, z, z)</c> <code>(x, y, z) => (y, z, z)</code></summary>
+        public static Vector3Int Fyzz(this Vector3Int self) => new(self.y, self.z, self.z);
+        /// <summary>format to <c>(z, x, x)</c> <code>(x, y, z) => (z, x, x)</code></summary>
+        public static Vector3Int Fzxx(this Vector3Int self) => new(self.z, self.x, self.x);
+        /// <summary>format to <c>(z, x, y)</c> <code>(x, y, z) => (z, x, y)</code></summary>
+        public static Vector3Int Fzxy(this Vector3Int self) => new(self.z, self.x, self.y);
+        /// <summary>format to <c>(z, x, z)</c> <code>(x, y, z) => (z, x, z)</code></summary>
+        public static Vector3Int Fzxz(this Vector3Int self) => new(self.z, self.x, self.z);
+        /// <summary>format to <c>(z, y, x)</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        public static Vector3Int Fzyx(this Vector3Int self) => new(self.z, self.y, self.x);
+        /// <summary>format to <c>(z, y, y)</c> <code>(x, y, z) => (z, y, y)</code></summary>
+        public static Vector3Int Fzyy(this Vector3Int self) => new(self.z, self.y, self.y);
+        /// <summary>format to <c>(z, y, z)</c> <code>(x, y, z) => (z, y, z)</code></summary>
+        public static Vector3Int Fzyz(this Vector3Int self) => new(self.z, self.y, self.z);
+        /// <summary>format to <c>(z, z, x)</c> <code>(x, y, z) => (z, z, x)</code></summary>
+        public static Vector3Int Fzzx(this Vector3Int self) => new(self.z, self.z, self.x);
+        /// <summary>format to <c>(z, z, y)</c> <code>(x, y, z) => (z, z, y)</code></summary>
+        public static Vector3Int Fzzy(this Vector3Int self) => new(self.z, self.z, self.y);
+        /// <summary>format to <c>(z, z, z)</c> <code>(x, y, z) => (z, z, z)</code></summary>
+        public static Vector3Int Fzzz(this Vector3Int self) => new(self.z, self.z, self.z);
+
         #endregion
 
         #region remove
@@ -637,7 +720,7 @@ namespace LibSugar.Unity
         public static Vector2 Ny(this Vector3 self) => new(self.x, self.z);
         /// <summary>remove <c>z</c> <code>(x, y, z) => (x, y)</code></summary>
         public static Vector2 Nz(this Vector3 self) => new(self.x, self.y);
-        
+
         /// <summary>remove <c>x</c> <code>(x, y, z, w) => (y, z, w)</code></summary>
         public static Vector3 Nx(this Vector4 self) => new(self.y, self.z, self.w);
         /// <summary>remove <c>y</c> <code>(x, y, z, w) => (x, z, w)</code></summary>
@@ -646,7 +729,7 @@ namespace LibSugar.Unity
         public static Vector3 Nz(this Vector4 self) => new(self.x, self.y, self.w);
         /// <summary>remove <c>w</c> <code>(x, y, z, w) => (x, y, z)</code></summary>
         public static Vector3 Nw(this Vector4 self) => new(self.x, self.y, self.z);
-        
+
         /// <summary>remove <c>x &amp; y</c> <code>(x, y, z, w) => (z, w)</code></summary>
         public static Vector2 Nxy(this Vector4 self) => new(self.z, self.w);
         /// <summary>remove <c>x &amp; z</c> <code>(x, y, z, w) => (y, w)</code></summary>
@@ -659,6 +742,13 @@ namespace LibSugar.Unity
         public static Vector2 Nyw(this Vector4 self) => new(self.x, self.z);
         /// <summary>remove <c>z &amp; w</c> <code>(x, y, z, w) => (x, y)</code></summary>
         public static Vector2 Nzw(this Vector4 self) => new(self.x, self.y);
+
+        /// <summary>remove <c>x</c> <code>(x, y, z) => (y, z)</code></summary>
+        public static Vector2Int Nx(this Vector3Int self) => new(self.y, self.z);
+        /// <summary>remove <c>y</c> <code>(x, y, z) => (x, z)</code></summary>
+        public static Vector2Int Ny(this Vector3Int self) => new(self.x, self.z);
+        /// <summary>remove <c>z</c> <code>(x, y, z) => (x, y)</code></summary>
+        public static Vector2Int Nz(this Vector3Int self) => new(self.x, self.y);
 
         #endregion
 
@@ -682,7 +772,7 @@ namespace LibSugar.Unity
         public static Vector2 Tzy(this Vector3 self) => new(self.z, self.y);
         /// <summary>take <c>z &amp; z</c> <code>(x, y, z) => (z, z)</code></summary>
         public static Vector2 Tzz(this Vector3 self) => new(self.z, self.z);
-        
+
         /// <summary>take <c>x &amp; x &amp; x</c> <code>(x, y, z) => (x, x, x)</code></summary>
         public static Vector3 Txxx(this Vector4 self) => new(self.x, self.x, self.x);
         /// <summary>take <c>x &amp; x &amp; y</c> <code>(x, y, z) => (x, x, y)</code></summary>
@@ -811,7 +901,7 @@ namespace LibSugar.Unity
         public static Vector3 Twwz(this Vector4 self) => new(self.w, self.w, self.z);
         /// <summary>take <c>w &amp; w &amp; w</c> <code>(x, y, z) => (w, w, w)</code></summary>
         public static Vector3 Twww(this Vector4 self) => new(self.w, self.w, self.w);
-        
+
         /// <summary>take <c>x &amp; x</c> <code>(x, y, z) => (x, x)</code></summary>
         public static Vector2 Txx(this Vector4 self) => new(self.x, self.x);
         /// <summary>take <c>x &amp; y</c> <code>(x, y, z) => (x, y)</code></summary>
@@ -845,8 +935,27 @@ namespace LibSugar.Unity
         /// <summary>take <c>w &amp; w</c> <code>(x, y, z) => (w, w)</code></summary>
         public static Vector2 Tww(this Vector4 self) => new(self.w, self.w);
 
+        /// <summary>take <c>x &amp; x</c> <code>(x, y, z) => (x, x)</code></summary>
+        public static Vector2Int Txx(this Vector3Int self) => new(self.x, self.x);
+        /// <summary>take <c>x &amp; y</c> <code>(x, y, z) => (x, y)</code></summary>
+        public static Vector2Int Txy(this Vector3Int self) => new(self.x, self.y);
+        /// <summary>take <c>x &amp; z</c> <code>(x, y, z) => (x, z)</code></summary>
+        public static Vector2Int Txz(this Vector3Int self) => new(self.x, self.z);
+        /// <summary>take <c>y &amp; x</c> <code>(x, y, z) => (y, x)</code></summary>
+        public static Vector2Int Tyx(this Vector3Int self) => new(self.y, self.x);
+        /// <summary>take <c>y &amp; y</c> <code>(x, y, z) => (y, y)</code></summary>
+        public static Vector2Int Tyy(this Vector3Int self) => new(self.y, self.y);
+        /// <summary>take <c>y &amp; z</c> <code>(x, y, z) => (y, z)</code></summary>
+        public static Vector2Int Tyz(this Vector3Int self) => new(self.y, self.z);
+        /// <summary>take <c>z &amp; x</c> <code>(x, y, z) => (z, x)</code></summary>
+        public static Vector2Int Tzx(this Vector3Int self) => new(self.z, self.x);
+        /// <summary>take <c>z &amp; y</c> <code>(x, y, z) => (z, y)</code></summary>
+        public static Vector2Int Tzy(this Vector3Int self) => new(self.z, self.y);
+        /// <summary>take <c>z &amp; z</c> <code>(x, y, z) => (z, z)</code></summary>
+        public static Vector2Int Tzz(this Vector3Int self) => new(self.z, self.z);
+
         #endregion
-        
+
         #region insert
 
         /// <summary>insert <c>X</c> <code>(x, y) => (X, x, y)</code></summary>
@@ -877,7 +986,7 @@ namespace LibSugar.Unity
         public static Vector4 Iyw(this Vector2 self, float y, float w) => new(self.x, y, self.y, w);
         /// <summary>insert <c>(X, W)</c> <code>(x, y) => (X, x, y, W)</code></summary>
         public static Vector4 Ixw(this Vector2 self, float x, float w) => new(x, self.x, self.y, w);
-        
+
         /// <summary>insert <c>(X, Y)</c> <code>(x, y) => (X, Y, x, y)</code></summary>
         public static Vector4 Ixy(this Vector2 self, Vector2 v) => new(v.x, v.y, self.x, self.y);
         /// <summary>insert <c>(Y, Z)</c> <code>(x, y) => (x, Y, Z, y)</code></summary>
@@ -890,7 +999,14 @@ namespace LibSugar.Unity
         public static Vector4 Iyw(this Vector2 self, Vector2 v) => new(self.x, v.x, self.y, v.y);
         /// <summary>insert <c>(X, W)</c> <code>(x, y) => (X, x, y, W)</code></summary>
         public static Vector4 Ixw(this Vector2 self, Vector2 v) => new(v.x, self.x, self.y, v.y);
-        
+
+        /// <summary>insert <c>X</c> <code>(x, y) => (X, x, y)</code></summary>
+        public static Vector3Int Ix(this Vector2Int self, int x) => new(x, self.x, self.y);
+        /// <summary>insert <c>Y</c> <code>(x, y) => (x, Y, y)</code></summary>
+        public static Vector3Int Iy(this Vector2Int self, int y) => new(self.x, y, self.y);
+        /// <summary>insert <c>Z</c> <code>(x, y) => (x, y, Z)</code></summary>
+        public static Vector3Int Iz(this Vector2Int self, int z) => new(self.x, self.y, z);
+
         #endregion
 
         #region replace
@@ -899,14 +1015,14 @@ namespace LibSugar.Unity
         public static Vector2 Rx(this Vector2 self, float x) => new(x, self.y);
         /// <summary>replace <c>y</c> <code>(x, y) => (x, Y)</code></summary>
         public static Vector2 Ry(this Vector2 self, float y) => new(self.x, y);
-        
+
         /// <summary>replace <c>x</c> <code>(x, y, z) => (X, y, z)</code></summary>
         public static Vector3 Rx(this Vector3 self, float x) => new(x, self.y, self.z);
         /// <summary>replace <c>y</c> <code>(x, y, z) => (x, Y, z)</code></summary>
         public static Vector3 Ry(this Vector3 self, float y) => new(self.x, y, self.z);
         /// <summary>replace <c>z</c> <code>(x, y, z) => (x, y, Z)</code></summary>
         public static Vector3 Rz(this Vector3 self, float z) => new(self.x, self.y, z);
-        
+
         /// <summary>replace <c>x &amp; y</c> <code>(x, y, z) => (X, Y, z)</code></summary>
         public static Vector3 Rxy(this Vector3 self, float x, float y) => new(x, y, self.z);
         /// <summary>replace <c>y &amp; z</c> <code>(x, y, z) => (x, Y, Z)</code></summary>
@@ -935,8 +1051,145 @@ namespace LibSugar.Unity
         public static Vector4 Rxz(this Vector4 self, float x, float z) => new(x, self.y, z, self.w);
         /// <summary>replace <c>y &amp; w</c> <code>(x, y, z, w) => (x, Y, z, W)</code></summary>
         public static Vector4 Ryw(this Vector4 self, float y, float w) => new(self.x, y, self.z, w);
-        
+
+        /// <summary>replace <c>x</c> <code>(x, y) => (X, y)</code></summary>
+        public static Vector2Int Rx(this Vector2Int self, int x) => new(x, self.y);
+        /// <summary>replace <c>y</c> <code>(x, y) => (x, Y)</code></summary>
+        public static Vector2Int Ry(this Vector2Int self, int y) => new(self.x, y);
+
+        /// <summary>replace <c>x</c> <code>(x, y, z) => (X, y, z)</code></summary>
+        public static Vector3Int Rx(this Vector3Int self, int x) => new(x, self.y, self.z);
+        /// <summary>replace <c>y</c> <code>(x, y, z) => (x, Y, z)</code></summary>
+        public static Vector3Int Ry(this Vector3Int self, int y) => new(self.x, y, self.z);
+        /// <summary>replace <c>z</c> <code>(x, y, z) => (x, y, Z)</code></summary>
+        public static Vector3Int Rz(this Vector3Int self, int z) => new(self.x, self.y, z);
+
+        /// <summary>replace <c>x &amp; y</c> <code>(x, y, z) => (X, Y, z)</code></summary>
+        public static Vector3Int Rxy(this Vector3Int self, int x, int y) => new(x, y, self.z);
+        /// <summary>replace <c>y &amp; z</c> <code>(x, y, z) => (x, Y, Z)</code></summary>
+        public static Vector3Int Ryz(this Vector3Int self, int y, int z) => new(self.x, y, z);
+        /// <summary>replace <c>x &amp; z</c> <code>(x, y, z) => (X, y, Z)</code></summary>
+        public static Vector3Int Rxz(this Vector3Int self, int x, int z) => new(x, self.y, z);
+
         #endregion
-        
+
+        #region math
+
+        /// <summary>abs <code>(x, y) => (abs(x), abs(y))</code></summary>
+        public static Vector2 Abs(this Vector2 self) => new(Mathf.Abs(self.x), Mathf.Abs(self.y));
+        /// <summary>add <code>(x, y) + (a, b) => (x + a, y + b)</code></summary>
+        public static Vector2 Add(this Vector2 self, Vector2 other) => new(self.x + other.x, self.y + other.y);
+        /// <summary>sub <code>(x, y) - (a, b) => (x - a, y - b)</code></summary>
+        public static Vector2 Sub(this Vector2 self, Vector2 other) => new(self.x - other.x, self.y - other.y);
+        /// <summary>mul <code>(x, y) * (a, b) => (x * a, y * b)</code></summary>
+        public static Vector2 Mul(this Vector2 self, Vector2 other) => new(self.x * other.x, self.y * other.y);
+        /// <summary>div <code>(x, y) / (a, b) => (x / a, y / b)</code></summary>
+        public static Vector2 Div(this Vector2 self, Vector2 other) => new(self.x / other.x, self.y / other.y);
+        /// <summary>distance <code>(x, y) &lt;=> (a, b) => distance</code></summary>
+        public static float Distance(this Vector2 self, Vector2 other) => Vector2.Distance(self, other);
+        /// <summary>distance squared <code>(x, y) &lt;=> (a, b) => distance squared</code></summary>
+        public static float DistanceSquared(this Vector2 self, Vector2 other) => LengthSquared(other - self);
+        /// <summary>length <code>(x, y) => length</code></summary>
+        public static float Length(this Vector2 self) => Mathf.Sqrt(self.Dot(self));
+        /// <summary>length squared <code>(x, y) => length squared</code></summary>
+        public static float LengthSquared(this Vector2 self) => self.Dot(self);
+        /// <summary>dot <code>(x, y) ， (a, b) => dot product</code></summary>
+        public static float Dot(this Vector2 self, Vector2 other) => Vector2.Dot(self, other);
+        /// <summary>lerp <code>(x, y) ~amount~ (a, b) => (x~amount~a, y~amount~b)</code></summary>
+        public static Vector2 Lerp(this Vector2 self, Vector2 other, float amount) => Vector2.Lerp(self, other, amount);
+
+        /// <summary>abs <code>(x, y, z) => (abs(x), abs(y), abs(z))</code></summary>
+        public static Vector3 Abs(this Vector3 self) => new(Mathf.Abs(self.x), Mathf.Abs(self.y), Mathf.Abs(self.z));
+        /// <summary>add <code>(x, y, z) + (a, b, c) => (x + a, y + b, z + c)</code></summary>
+        public static Vector3 Add(this Vector3 self, Vector3 other) => new(self.x + other.x, self.y + other.y, self.z + other.z);
+        /// <summary>sub <code>(x, y, z) - (a, b, c) => (x - a, y - b, z - c)</code></summary>
+        public static Vector3 Sub(this Vector3 self, Vector3 other) => new(self.x - other.x, self.y - other.y, self.z - other.z);
+        /// <summary>mul <code>(x, y, z) * (a, b, c) => (x * a, y * b, z * c)</code></summary>
+        public static Vector3 Mul(this Vector3 self, Vector3 other) => new(self.x * other.x, self.y * other.y, self.z * other.z);
+        /// <summary>div <code>(x, y, z) / (a, b, c) => (x / a, y / b, z / c)</code></summary>
+        public static Vector3 Div(this Vector3 self, Vector3 other) => new(self.x / other.x, self.y / other.y, self.z / other.z);
+        /// <summary>distance <code>(x, y, z) &lt;=> (a, b, c) => distance</code></summary>
+        public static float Distance(this Vector3 self, Vector3 other) => Vector3.Distance(self, other);
+        /// <summary>distance squared <code>(x, y, z) &lt;=> (a, b, c) => distance squared</code></summary>
+        public static float DistanceSquared(this Vector3 self, Vector3 other) => LengthSquared(other - self);
+        /// <summary>length <code>(x, y, z) => length</code></summary>
+        public static float Length(this Vector3 self) => Mathf.Sqrt(self.Dot(self));
+        /// <summary>length squared <code>(x, y, z) => length squared</code></summary>
+        public static float LengthSquared(this Vector3 self) => self.Dot(self);
+        /// <summary>dot <code>(x, y, z) ， (a, b, c) => dot product</code></summary>
+        public static float Dot(this Vector3 self, Vector3 other) => Vector3.Dot(self, other);
+        /// <summary>cross <code>(x, y, z) 〜 (a, b, c) => (cx, cy, cz)</code></summary>
+        public static Vector3 Cross(this Vector3 self, Vector3 other) => Vector3.Cross(self, other);
+        /// <summary>lerp <code>(x, y, z) ~t~ (a, b, c) => (x ~t~ a, y ~t~ b, z ~t~ c)</code></summary>
+        public static Vector3 Lerp(this Vector3 self, Vector3 other, float amount) => Vector3.Lerp(self, other, amount);
+
+        /// <summary>abs <code>(x, y, z, w) => (abs(x), abs(y), abs(z), abs(w))</code></summary>
+        public static Vector4 Abs(this Vector4 self) => new(Mathf.Abs(self.x), Mathf.Abs(self.y), Mathf.Abs(self.z));
+        /// <summary>add <code>(x, y, z, w) + (a, b, c, d) => (x + a, y + b, z + c, w + d)</code></summary>
+        public static Vector4 Add(this Vector4 self, Vector4 other) => new(self.x + other.x, self.y + other.y, self.z + other.z);
+        /// <summary>sub <code>(x, y, z, w) - (a, b, c, d) => (x - a, y - b, z - c, w - d)</code></summary>
+        public static Vector4 Sub(this Vector4 self, Vector4 other) => new(self.x - other.x, self.y - other.y, self.z - other.z);
+        /// <summary>mul <code>(x, y, z, w) * (a, b, c, d) => (x * a, y * b, z * c, w * d)</code></summary>
+        public static Vector4 Mul(this Vector4 self, Vector4 other) => new(self.x * other.x, self.y * other.y, self.z * other.z);
+        /// <summary>div <code>(x, y, z, w) / (a, b, c, d) => (x / a, y / b, z / c, w / d)</code></summary>
+        public static Vector4 Div(this Vector4 self, Vector4 other) => new(self.x / other.x, self.y / other.y, self.z / other.z);
+        /// <summary>distance <code>(x, y, z, w) &lt;=> (a, b, c, d) => distance</code></summary>
+        public static float Distance(this Vector4 self, Vector4 other) => Vector4.Distance(self, other);
+        /// <summary>distance squared <code>(x, y, z, w) &lt;=> (a, b, c, d) => distance squared</code></summary>
+        public static float DistanceSquared(this Vector4 self, Vector4 other) => LengthSquared(other - self);
+        /// <summary>length <code>(x, y, z, w) => length</code></summary>
+        public static float Length(this Vector4 self) => Mathf.Sqrt(self.Dot(self));
+        /// <summary>length squared <code>(x, y, z, w) => length squared</code></summary>
+        public static float LengthSquared(this Vector4 self) => self.Dot(self);
+        /// <summary>dot <code>(x, y, z, w) ， (a, b, c, d) => dot product</code></summary>
+        public static float Dot(this Vector4 self, Vector4 other) => Vector4.Dot(self, other);
+        /// <summary>lerp <code>(x, y, z, w) ~t~ (a, b, c, d) => (x ~t~ a, y ~t~ b, z ~t~ c, w ~t~ d)</code></summary>
+        public static Vector4 Lerp(this Vector4 self, Vector4 other, float amount) => Vector4.Lerp(self, other, amount);
+
+        /// <summary>abs <code>(x, y) => (abs(x), abs(y))</code></summary>
+        public static Vector2Int Abs(this Vector2Int self) => new(Math.Abs(self.x), Math.Abs(self.y));
+        /// <summary>add <code>(x, y) + (a, b) => (x + a, y + b)</code></summary>
+        public static Vector2Int Add(this Vector2Int self, Vector2Int other) => new(self.x + other.x, self.y + other.y);
+        /// <summary>sub <code>(x, y) - (a, b) => (x - a, y - b)</code></summary>
+        public static Vector2Int Sub(this Vector2Int self, Vector2Int other) => new(self.x - other.x, self.y - other.y);
+        /// <summary>mul <code>(x, y) * (a, b) => (x * a, y * b)</code></summary>
+        public static Vector2Int Mul(this Vector2Int self, Vector2Int other) => new(self.x * other.x, self.y * other.y);
+        /// <summary>div <code>(x, y) / (a, b) => (x / a, y / b)</code></summary>
+        public static Vector2Int Div(this Vector2Int self, Vector2Int other) => new(self.x / other.x, self.y / other.y);
+        /// <summary>distance <code>(x, y) &lt;=> (a, b) => distance</code></summary>
+        public static float Distance(this Vector2Int self, Vector2Int other) => Vector2Int.Distance(self, other);
+        /// <summary>distance squared <code>(x, y) &lt;=> (a, b) => distance squared</code></summary>
+        public static int DistanceSquared(this Vector2Int self, Vector2Int other) => LengthSquared(other - self);
+        /// <summary>length <code>(x, y) => length</code></summary>
+        public static float Length(this Vector2Int self) => Mathf.Sqrt(self.Dot(self));
+        /// <summary>length squared <code>(x, y) => length squared</code></summary>
+        public static int LengthSquared(this Vector2Int self) => self.Dot(self);
+        /// <summary>dot <code>(x, y) ， (a, b) => dot product</code></summary>
+        public static int Dot(this Vector2Int self, Vector2Int other) => self.x * other.x + self.y * other.y;
+
+        /// <summary>abs <code>(x, y, z) => (abs(x), abs(y), abs(z))</code></summary>
+        public static Vector3Int Abs(this Vector3Int self) => new(Math.Abs(self.x), Math.Abs(self.y), Math.Abs(self.z));
+        /// <summary>add <code>(x, y, z) + (a, b, c) => (x + a, y + b, z + c)</code></summary>
+        public static Vector3Int Add(this Vector3Int self, Vector3Int other) => new(self.x + other.x, self.y + other.y, self.z + other.z);
+        /// <summary>sub <code>(x, y, z) - (a, b, c) => (x - a, y - b, z - c)</code></summary>
+        public static Vector3Int Sub(this Vector3Int self, Vector3Int other) => new(self.x - other.x, self.y - other.y, self.z - other.z);
+        /// <summary>mul <code>(x, y, z) * (a, b, c) => (x * a, y * b, z * c)</code></summary>
+        public static Vector3Int Mul(this Vector3Int self, Vector3Int other) => new(self.x * other.x, self.y * other.y, self.z * other.z);
+        /// <summary>div <code>(x, y, z) / (a, b, c) => (x / a, y / b, z / c)</code></summary>
+        public static Vector3Int Div(this Vector3Int self, Vector3Int other) => new(self.x / other.x, self.y / other.y, self.z / other.z);
+        /// <summary>distance <code>(x, y, z) &lt;=> (a, b, c) => distance</code></summary>
+        public static float Distance(this Vector3Int self, Vector3Int other) => Vector3Int.Distance(self, other);
+        /// <summary>distance squared <code>(x, y, z) &lt;=> (a, b, c) => distance squared</code></summary>
+        public static float DistanceSquared(this Vector3Int self, Vector3Int other) => LengthSquared(other - self);
+        /// <summary>length <code>(x, y, z) => length</code></summary>
+        public static float Length(this Vector3Int self) => Mathf.Sqrt(self.Dot(self));
+        /// <summary>length squared <code>(x, y, z) => length squared</code></summary>
+        public static float LengthSquared(this Vector3Int self) => self.Dot(self);
+        /// <summary>dot <code>(x, y, z) ， (a, b, c) => dot product</code></summary>
+        public static float Dot(this Vector3Int self, Vector3Int other) => self.x * other.x + self.y * other.y + self.z * other.z;
+        /// <summary>cross <code>(x, y, z) 〜 (a, b, c) => (cx, cy, cz)</code></summary>
+        public static Vector3Int Cross(this Vector3Int self, Vector3Int other) => (self.Mul(other.Fyzx()) - self.Fyzx().Mul(other)).Fyzx();
+
+        #endregion
     }
 }

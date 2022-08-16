@@ -4,6 +4,79 @@
         <name>Sugar.Unity</name>
     </assembly>
     <members>
+        <member name="T:LibSugar.Unity.Syntax.QuatSynExt">
+            <summary>
+            Quaternion Syntax Ext
+            </summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.QuatSynExt.Deconstruct(UnityEngine.Quaternion,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>Deconstruct<code>var (x, y, z, w) = quat</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.QuatSynExt.Deconstruct(UnityEngine.Quaternion,System.Single@,System.Single@,System.Single@)">
+            <summary>Deconstruct<code>var (x, y, z) = quat.eulerAngles</code></summary>
+        </member>
+        <member name="T:LibSugar.Unity.Syntax.TransformSynExt">
+            <summary>
+            Transform Syntax Ext
+            </summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.TransformSynExt.Deconstruct(UnityEngine.Transform,UnityEngine.Vector3@,UnityEngine.Quaternion@)">
+            <summary>Deconstruct<code>var (position, rotation) = trans</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.TransformSynExt.Deconstruct(UnityEngine.Transform,UnityEngine.Vector3@,UnityEngine.Quaternion@,UnityEngine.Vector3@)">
+            <summary>Deconstruct<code>var (localPosition, localRotation, localScale) = trans</code></summary>
+        </member>
+        <member name="T:LibSugar.Unity.Syntax.VecSynExt">
+            <summary>
+            Vector Syntax Ext
+            </summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.VecSynExt.Deconstruct(UnityEngine.Vector2,System.Single@,System.Single@)">
+            <summary>Deconstruct<code>var (x, y) = vec2</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.VecSynExt.Deconstruct(UnityEngine.Vector3,System.Single@,System.Single@,System.Single@)">
+            <summary>Deconstruct<code>var (x, y, z) = vec3</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.VecSynExt.Deconstruct(UnityEngine.Vector4,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>Deconstruct<code>var (x, y, z, w) = vec4</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.VecSynExt.Deconstruct(UnityEngine.Vector2Int,System.Int32@,System.Int32@)">
+            <summary>Deconstruct<code>var (x, y) = vec2</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.Syntax.VecSynExt.Deconstruct(UnityEngine.Vector3Int,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>Deconstruct<code>var (x, y, z) = vec3</code></summary>
+        </member>
+        <member name="T:LibSugar.Unity.TransformExt">
+            <summary>
+            Transform Ext
+            </summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectPosition``1(``0,System.Func{UnityEngine.Vector3,UnityEngine.Vector3})">
+            <summary>select by <c>f</c> <code>{ position } => { f(position) }</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectLocalPosition``1(``0,System.Func{UnityEngine.Vector3,UnityEngine.Vector3})">
+            <summary>select by <c>f</c> <code>{ localPosition } => { f(localPosition) }</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectEulerAngles``1(``0,System.Func{UnityEngine.Vector3,UnityEngine.Vector3})">
+            <summary>select by <c>f</c> <code>{ eulerAngles } => { f(eulerAngles) }</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectLocalEulerAngles``1(``0,System.Func{UnityEngine.Vector3,UnityEngine.Vector3})">
+            <summary>select by <c>f</c> <code>{ localEulerAngles } => { f(localEulerAngles) }</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectRotation``1(``0,System.Func{UnityEngine.Quaternion,UnityEngine.Quaternion})">
+            <summary>select by <c>f</c> <code>{ rotation } => { f(rotation) }</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectLocalRotation``1(``0,System.Func{UnityEngine.Quaternion,UnityEngine.Quaternion})">
+            <summary>select by <c>f</c> <code>{ localRotation } => { f(localRotation) }</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.TransformExt.SelectLocalScale``1(``0,System.Func{UnityEngine.Vector3,UnityEngine.Vector3})">
+            <summary>select by <c>f</c> <code>{ localScale } => { f(localScale) }</code></summary>
+        </member>
+        <member name="T:LibSugar.Unity.VecExt">
+            <summary>
+            Vector Ext
+            </summary>
+        </member>
         <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector2,System.Func{System.Single,System.Single})">
             <summary>select by <c>f</c> <code>(x, y) => (f(x), f(y))</code></summary>
         </member>
@@ -12,6 +85,12 @@
         </member>
         <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector4,System.Func{System.Single,System.Single})">
             <summary>select by <c>f</c> <code>(x, y, z, w) => (f(x), f(y), f(z), f(w))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector2Int,System.Func{System.Int32,System.Int32})">
+            <summary>select by <c>f</c> <code>(x, y) => (f(x), f(y))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Select(UnityEngine.Vector3Int,System.Func{System.Int32,System.Int32})">
+            <summary>select by <c>f</c> <code>(x, y, z) => (f(x), f(y), f(z))</code></summary>
         </member>
         <member name="M:LibSugar.Unity.VecExt.Syx(UnityEngine.Vector2)">
             <summary>swap <c>x &lt;=> y</c> <code>(x, y) => (y, x)</code></summary>
@@ -42,6 +121,18 @@
         </member>
         <member name="M:LibSugar.Unity.VecExt.Swz(UnityEngine.Vector4)">
             <summary>swap <c>z &lt;=> w</c> <code>(x, y, z, w) => (x, y, w, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Syx(UnityEngine.Vector2Int)">
+            <summary>swap <c>x &lt;=> y</c> <code>(x, y) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Syx(UnityEngine.Vector3Int)">
+            <summary>swap <c>x &lt;=> y</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Szx(UnityEngine.Vector3Int)">
+            <summary>swap <c>x &lt;=> z</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Szy(UnityEngine.Vector3Int)">
+            <summary>swap <c>y &lt;=> z</c> <code>(x, y, z) => (x, z, y)</code></summary>
         </member>
         <member name="M:LibSugar.Unity.VecExt.Fxx(UnityEngine.Vector2)">
             <summary>format to <c>(x, x)</c> <code>(x, y) => (x, x)</code></summary>
@@ -904,6 +995,99 @@
         <member name="M:LibSugar.Unity.VecExt.Fwwww(UnityEngine.Vector4)">
             <summary>format to <c>(w, w, w, w)</c> <code>(x, y, z, w) => (w, w, w, w)</code></summary>
         </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxx(UnityEngine.Vector2Int)">
+            <summary>format to <c>(x, x)</c> <code>(x, y) => (x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxy(UnityEngine.Vector2Int)">
+            <summary>format to <c>(x, y)</c> <code>(x, y) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyx(UnityEngine.Vector2Int)">
+            <summary>format to <c>(y, x)</c> <code>(x, y) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyy(UnityEngine.Vector2Int)">
+            <summary>format to <c>(y, y)</c> <code>(x, y) => (y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, x, x)</c> <code>(x, y, z) => (x, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, x, y)</c> <code>(x, y, z) => (x, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxxz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, x, z)</c> <code>(x, y, z) => (x, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, y, x)</c> <code>(x, y, z) => (x, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, y, y)</c> <code>(x, y, z) => (x, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxyz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, y, z)</c> <code>(x, y, z) => (x, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, z, x)</c> <code>(x, y, z) => (x, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, z, y)</c> <code>(x, y, z) => (x, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fxzz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(x, z, z)</c> <code>(x, y, z) => (x, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, x, x)</c> <code>(x, y, z) => (y, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, x, y)</c> <code>(x, y, z) => (y, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyxz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, x, z)</c> <code>(x, y, z) => (y, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, y, x)</c> <code>(x, y, z) => (y, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, y, y)</c> <code>(x, y, z) => (y, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyyz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, y, z)</c> <code>(x, y, z) => (y, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, z, x)</c> <code>(x, y, z) => (y, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, z, y)</c> <code>(x, y, z) => (y, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fyzz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(y, z, z)</c> <code>(x, y, z) => (y, z, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, x, x)</c> <code>(x, y, z) => (z, x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, x, y)</c> <code>(x, y, z) => (z, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzxz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, x, z)</c> <code>(x, y, z) => (z, x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, y, x)</c> <code>(x, y, z) => (z, y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, y, y)</c> <code>(x, y, z) => (z, y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzyz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, y, z)</c> <code>(x, y, z) => (z, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzx(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, z, x)</c> <code>(x, y, z) => (z, z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzy(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, z, y)</c> <code>(x, y, z) => (z, z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Fzzz(UnityEngine.Vector3Int)">
+            <summary>format to <c>(z, z, z)</c> <code>(x, y, z) => (z, z, z)</code></summary>
+        </member>
         <member name="M:LibSugar.Unity.VecExt.Nx(UnityEngine.Vector3)">
             <summary>remove <c>x</c> <code>(x, y, z) => (y, z)</code></summary>
         </member>
@@ -942,6 +1126,15 @@
         </member>
         <member name="M:LibSugar.Unity.VecExt.Nzw(UnityEngine.Vector4)">
             <summary>remove <c>z &amp; w</c> <code>(x, y, z, w) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nx(UnityEngine.Vector3Int)">
+            <summary>remove <c>x</c> <code>(x, y, z) => (y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ny(UnityEngine.Vector3Int)">
+            <summary>remove <c>y</c> <code>(x, y, z) => (x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Nz(UnityEngine.Vector3Int)">
+            <summary>remove <c>z</c> <code>(x, y, z) => (x, y)</code></summary>
         </member>
         <member name="M:LibSugar.Unity.VecExt.Txx(UnityEngine.Vector3)">
             <summary>take <c>x &amp; x</c> <code>(x, y, z) => (x, x)</code></summary>
@@ -1210,6 +1403,33 @@
         <member name="M:LibSugar.Unity.VecExt.Tww(UnityEngine.Vector4)">
             <summary>take <c>w &amp; w</c> <code>(x, y, z) => (w, w)</code></summary>
         </member>
+        <member name="M:LibSugar.Unity.VecExt.Txx(UnityEngine.Vector3Int)">
+            <summary>take <c>x &amp; x</c> <code>(x, y, z) => (x, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txy(UnityEngine.Vector3Int)">
+            <summary>take <c>x &amp; y</c> <code>(x, y, z) => (x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Txz(UnityEngine.Vector3Int)">
+            <summary>take <c>x &amp; z</c> <code>(x, y, z) => (x, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyx(UnityEngine.Vector3Int)">
+            <summary>take <c>y &amp; x</c> <code>(x, y, z) => (y, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyy(UnityEngine.Vector3Int)">
+            <summary>take <c>y &amp; y</c> <code>(x, y, z) => (y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tyz(UnityEngine.Vector3Int)">
+            <summary>take <c>y &amp; z</c> <code>(x, y, z) => (y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzx(UnityEngine.Vector3Int)">
+            <summary>take <c>z &amp; x</c> <code>(x, y, z) => (z, x)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzy(UnityEngine.Vector3Int)">
+            <summary>take <c>z &amp; y</c> <code>(x, y, z) => (z, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Tzz(UnityEngine.Vector3Int)">
+            <summary>take <c>z &amp; z</c> <code>(x, y, z) => (z, z)</code></summary>
+        </member>
         <member name="M:LibSugar.Unity.VecExt.Ix(UnityEngine.Vector2,System.Single)">
             <summary>insert <c>X</c> <code>(x, y) => (X, x, y)</code></summary>
         </member>
@@ -1267,6 +1487,15 @@
         <member name="M:LibSugar.Unity.VecExt.Ixw(UnityEngine.Vector2,UnityEngine.Vector2)">
             <summary>insert <c>(X, W)</c> <code>(x, y) => (X, x, y, W)</code></summary>
         </member>
+        <member name="M:LibSugar.Unity.VecExt.Ix(UnityEngine.Vector2Int,System.Int32)">
+            <summary>insert <c>X</c> <code>(x, y) => (X, x, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iy(UnityEngine.Vector2Int,System.Int32)">
+            <summary>insert <c>Y</c> <code>(x, y) => (x, Y, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Iz(UnityEngine.Vector2Int,System.Int32)">
+            <summary>insert <c>Z</c> <code>(x, y) => (x, y, Z)</code></summary>
+        </member>
         <member name="M:LibSugar.Unity.VecExt.Rx(UnityEngine.Vector2,System.Single)">
             <summary>replace <c>x</c> <code>(x, y) => (X, y)</code></summary>
         </member>
@@ -1320,6 +1549,195 @@
         </member>
         <member name="M:LibSugar.Unity.VecExt.Ryw(UnityEngine.Vector4,System.Single,System.Single)">
             <summary>replace <c>y &amp; w</c> <code>(x, y, z, w) => (x, Y, z, W)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rx(UnityEngine.Vector2Int,System.Int32)">
+            <summary>replace <c>x</c> <code>(x, y) => (X, y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ry(UnityEngine.Vector2Int,System.Int32)">
+            <summary>replace <c>y</c> <code>(x, y) => (x, Y)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rx(UnityEngine.Vector3Int,System.Int32)">
+            <summary>replace <c>x</c> <code>(x, y, z) => (X, y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ry(UnityEngine.Vector3Int,System.Int32)">
+            <summary>replace <c>y</c> <code>(x, y, z) => (x, Y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rz(UnityEngine.Vector3Int,System.Int32)">
+            <summary>replace <c>z</c> <code>(x, y, z) => (x, y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxy(UnityEngine.Vector3Int,System.Int32,System.Int32)">
+            <summary>replace <c>x &amp; y</c> <code>(x, y, z) => (X, Y, z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Ryz(UnityEngine.Vector3Int,System.Int32,System.Int32)">
+            <summary>replace <c>y &amp; z</c> <code>(x, y, z) => (x, Y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Rxz(UnityEngine.Vector3Int,System.Int32,System.Int32)">
+            <summary>replace <c>x &amp; z</c> <code>(x, y, z) => (X, y, Z)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Abs(UnityEngine.Vector2)">
+            <summary>abs <code>(x, y) => (abs(x), abs(y))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Add(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>add <code>(x, y) + (a, b) => (x + a, y + b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Sub(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>sub <code>(x, y) - (a, b) => (x - a, y - b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Mul(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>mul <code>(x, y) * (a, b) => (x * a, y * b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Div(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>div <code>(x, y) / (a, b) => (x / a, y / b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Distance(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>distance <code>(x, y) &lt;=> (a, b) => distance</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.DistanceSquared(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>distance squared <code>(x, y) &lt;=> (a, b) => distance squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Length(UnityEngine.Vector2)">
+            <summary>length <code>(x, y) => length</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.LengthSquared(UnityEngine.Vector2)">
+            <summary>length squared <code>(x, y) => length squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Dot(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>dot <code>(x, y) · (a, b) => dot product</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Lerp(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+            <summary>lerp <code>(x, y) ~amount~ (a, b) => (x~amount~a, y~amount~b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Abs(UnityEngine.Vector3)">
+            <summary>abs <code>(x, y, z) => (abs(x), abs(y), abs(z))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Add(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>add <code>(x, y, z) + (a, b, c) => (x + a, y + b, z + c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Sub(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>sub <code>(x, y, z) - (a, b, c) => (x - a, y - b, z - c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Mul(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>mul <code>(x, y, z) * (a, b, c) => (x * a, y * b, z * c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Div(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>div <code>(x, y, z) / (a, b, c) => (x / a, y / b, z / c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Distance(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>distance <code>(x, y, z) &lt;=> (a, b, c) => distance</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.DistanceSquared(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>distance squared <code>(x, y, z) &lt;=> (a, b, c) => distance squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Length(UnityEngine.Vector3)">
+            <summary>length <code>(x, y, z) => length</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.LengthSquared(UnityEngine.Vector3)">
+            <summary>length squared <code>(x, y, z) => length squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Dot(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>dot <code>(x, y, z) · (a, b, c) => dot product</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Cross(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>cross <code>(x, y, z) × (a, b, c) => (cx, cy, cz)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Lerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>lerp <code>(x, y, z) ~t~ (a, b, c) => (x ~t~ a, y ~t~ b, z ~t~ c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Abs(UnityEngine.Vector4)">
+            <summary>abs <code>(x, y, z, w) => (abs(x), abs(y), abs(z), abs(w))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Add(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>add <code>(x, y, z, w) + (a, b, c, d) => (x + a, y + b, z + c, w + d)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Sub(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>sub <code>(x, y, z, w) - (a, b, c, d) => (x - a, y - b, z - c, w - d)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Mul(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>mul <code>(x, y, z, w) * (a, b, c, d) => (x * a, y * b, z * c, w * d)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Div(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>div <code>(x, y, z, w) / (a, b, c, d) => (x / a, y / b, z / c, w / d)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Distance(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>distance <code>(x, y, z, w) &lt;=> (a, b, c, d) => distance</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.DistanceSquared(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>distance squared <code>(x, y, z, w) &lt;=> (a, b, c, d) => distance squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Length(UnityEngine.Vector4)">
+            <summary>length <code>(x, y, z, w) => length</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.LengthSquared(UnityEngine.Vector4)">
+            <summary>length squared <code>(x, y, z, w) => length squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Dot(UnityEngine.Vector4,UnityEngine.Vector4)">
+            <summary>dot <code>(x, y, z, w) · (a, b, c, d) => dot product</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Lerp(UnityEngine.Vector4,UnityEngine.Vector4,System.Single)">
+            <summary>lerp <code>(x, y, z, w) ~t~ (a, b, c, d) => (x ~t~ a, y ~t~ b, z ~t~ c, w ~t~ d)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Abs(UnityEngine.Vector2Int)">
+            <summary>abs <code>(x, y) => (abs(x), abs(y))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Add(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>add <code>(x, y) + (a, b) => (x + a, y + b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Sub(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>sub <code>(x, y) - (a, b) => (x - a, y - b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Mul(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>mul <code>(x, y) * (a, b) => (x * a, y * b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Div(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>div <code>(x, y) / (a, b) => (x / a, y / b)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Distance(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>distance <code>(x, y) &lt;=> (a, b) => distance</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.DistanceSquared(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>distance squared <code>(x, y) &lt;=> (a, b) => distance squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Length(UnityEngine.Vector2Int)">
+            <summary>length <code>(x, y) => length</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.LengthSquared(UnityEngine.Vector2Int)">
+            <summary>length squared <code>(x, y) => length squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Dot(UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>dot <code>(x, y) · (a, b) => dot product</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Abs(UnityEngine.Vector3Int)">
+            <summary>abs <code>(x, y, z) => (abs(x), abs(y), abs(z))</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Add(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>add <code>(x, y, z) + (a, b, c) => (x + a, y + b, z + c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Sub(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>sub <code>(x, y, z) - (a, b, c) => (x - a, y - b, z - c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Mul(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>mul <code>(x, y, z) * (a, b, c) => (x * a, y * b, z * c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Div(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>div <code>(x, y, z) / (a, b, c) => (x / a, y / b, z / c)</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Distance(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>distance <code>(x, y, z) &lt;=> (a, b, c) => distance</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.DistanceSquared(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>distance squared <code>(x, y, z) &lt;=> (a, b, c) => distance squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Length(UnityEngine.Vector3Int)">
+            <summary>length <code>(x, y, z) => length</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.LengthSquared(UnityEngine.Vector3Int)">
+            <summary>length squared <code>(x, y, z) => length squared</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Dot(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>dot <code>(x, y, z) · (a, b, c) => dot product</code></summary>
+        </member>
+        <member name="M:LibSugar.Unity.VecExt.Cross(UnityEngine.Vector3Int,UnityEngine.Vector3Int)">
+            <summary>cross <code>(x, y, z) × (a, b, c) => (cx, cy, cz)</code></summary>
         </member>
     </members>
 </doc>
